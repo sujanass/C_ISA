@@ -1,0 +1,334 @@
+xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s009: Started on Mar 23, 2023 at 04:37:44 IST
+xrun
+	-access +rwc
+	-f compile_list.f
+		./../../RTL_6/alu.sv
+		./../../RTL_6/forwarding_unit.sv
+		./../../RTL_6/gpr.sv
+		./../../RTL_6/instruction_decoder.sv
+		./../../RTL_6/ld_hazard_detect.sv
+		./../../RTL_6/ld_sd_address_gen.sv
+		./../../RTL_6/mux2x1.sv
+		./../../RTL_6/top.sv
+		./../UVME/top/C_ISA_inf.sv
+		./../UVME/package/C_ISA_pkg.sv
+		./../UVME/top/data_memory.sv
+		./../UVME/top/C_ISA_top.sv
+	-svseed 51297
+	+UVM_TESTNAME=C_ISA_li_test
+	+define+UVM_REPORT_DISABLE_FILE_LINE
+	-coverage all
+	-covdut riscv_top
+	-covworkdir /cov_work
+	-covoverwrite
+	-covfile ./cov_files/cov_cmd.cf
+	-uvmhome CDNS-1.1d
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
+file: ./../../RTL_6/alu.sv
+	module worklib.alu:sv
+		errors: 0, warnings: 0
+	module worklib.add:sv
+		errors: 0, warnings: 0
+	module worklib.sub:sv
+		errors: 0, warnings: 0
+	module worklib.sll:sv
+		errors: 0, warnings: 0
+	module worklib.xorg:sv
+		errors: 0, warnings: 0
+	module worklib.srl:sv
+		errors: 0, warnings: 0
+	module worklib.sra:sv
+		errors: 0, warnings: 0
+	module worklib.org:sv
+		errors: 0, warnings: 0
+	module worklib.andg:sv
+		errors: 0, warnings: 0
+	module worklib.lui:sv
+		errors: 0, warnings: 0
+	module worklib.jal:sv
+		errors: 0, warnings: 0
+	module worklib.jalr:sv
+		errors: 0, warnings: 0
+	module worklib.mvi:sv
+		errors: 0, warnings: 0
+	module worklib.nop:sv
+		errors: 0, warnings: 0
+file: ./../../RTL_6/forwarding_unit.sv
+	module worklib.forwarding:sv
+		errors: 0, warnings: 0
+file: ./../../RTL_6/gpr.sv
+	module worklib.reg_file:sv
+		errors: 0, warnings: 0
+	module worklib.dp_ram:sv
+		errors: 0, warnings: 0
+file: ./../../RTL_6/instruction_decoder.sv
+	module worklib.instruction_decoder:sv
+		errors: 0, warnings: 0
+file: ./../../RTL_6/ld_hazard_detect.sv
+	module worklib.load_hazard_ctrl:sv
+		errors: 0, warnings: 0
+file: ./../../RTL_6/ld_sd_address_gen.sv
+	module worklib.addr_gen:sv
+		errors: 0, warnings: 0
+file: ./../../RTL_6/mux2x1.sv
+	module worklib.mux2x1:sv
+		errors: 0, warnings: 0
+file: ./../../RTL_6/top.sv
+	module worklib.riscv_top:sv
+		errors: 0, warnings: 0
+	module worklib.fwd:sv
+		errors: 0, warnings: 0
+	module worklib.store_data:sv
+		errors: 0, warnings: 0
+	interface worklib.riscv_top_if:sv
+		errors: 0, warnings: 0
+file: ./../UVME/top/C_ISA_inf.sv
+	interface worklib.C_ISA_inf:sv
+		errors: 0, warnings: 0
+file: ./../UVME/package/C_ISA_pkg.sv
+        bins NOP = binsof(OPCODE.opcode_01) && binsof(FUNC4.func4_0000);
+           |
+xmvlog: *E,ILLPRI (./../UVME/env/C_ISA_coverage.sv,74|11): illegal expression primary [4.2(IEEE)].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 74, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        bins NOP = binsof(OPCODE.opcode_01) && binsof(FUNC4.func4_0000);
+               |
+xmvlog: *E,ECRECR (./../UVME/env/C_ISA_coverage.sv,74|15): The ('}') symbol is not specified at the end of cross declaration.
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 74, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        bins NOP = binsof(OPCODE.opcode_01) && binsof(FUNC4.func4_0000);
+                         |
+xmvlog: *E,ECGEGN (./../UVME/env/C_ISA_coverage.sv,74|25): The "endgroup" keyword in covergroup declaration is not specified.
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 74, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        bins EBREAK = binsof(OPCODE.opcode_10) && binsof(FUNC4.func4_1001);
+           |
+xmvlog: *E,ECGEGN (./../UVME/env/C_ISA_coverage.sv,75|11): The "endgroup" keyword in covergroup declaration is not specified.
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 75, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	}
+	|
+xmvlog: *E,ECGEGN (./../UVME/env/C_ISA_coverage.sv,76|1): The "endgroup" keyword in covergroup declaration is not specified.
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 76, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        I_TYPE: cross OPCODE, FUNC3 {
+                    |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,78|20): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 78, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        S_TYPE: cross OPCODE, FUNC2, FUNC6 {
+                    |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,88|20): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 88, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	SSL_TYPE: cross OPCODE, FUNC3 {
+	              |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,95|15): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 95, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	B_TYPE: cross OPCODE, FUNC2,FUNC3 {
+	            |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,101|13): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 101, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        RST: coverpoint seq_item.risc_rst {
+                      |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,110|22): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 110, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        VALID_EN: coverpoint seq_item.invalid_instruction_valid_o {
+                           |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,116|27): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 116, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        ADD_EN: coverpoint seq_item.add_en {
+                         |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,121|25): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 121, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        SUB_EN: coverpoint seq_item.sub_en {
+                         |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,126|25): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 126, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        OR_EN: coverpoint seq_item.or_en {
+                        |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,131|24): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 131, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        XOR_EN: coverpoint seq_item.xor_en {
+                         |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,136|25): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 136, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        AND_EN: coverpoint seq_item.and_en {
+                         |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,141|25): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 141, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        MV_EN: coverpoint seq_item.mv_en {
+                        |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,146|24): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 146, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        SLLI_EN: coverpoint seq_item.slli_en {
+                          |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,151|26): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 151, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        SRLI_EN: coverpoint seq_item.srli_en {
+                          |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,156|26): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 156, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        SRAI_EN: coverpoint seq_item.srai_en {
+                          |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,161|26): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 161, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        LUI_EN: coverpoint seq_item.lui_en {
+                         |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,166|25): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 166, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        LW_EN: coverpoint seq_item.lw_en {
+                        |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,171|24): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 171, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        SW_EN: coverpoint seq_item.sw_en {
+                        |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,176|24): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 176, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        ALU_DATA_1: coverpoint seq_item.oper1 {
+                             |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,182|29): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 182, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins rs1_data_1 = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,183|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 183, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	ALU_DATA_2: coverpoint seq_item.oper2 {
+	                     |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,186|22): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 186, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins rs2_data_2 = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,187|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 187, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	IMM_DATA: coverpoint seq_item.imm_val {
+	                   |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,190|20): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 190, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins imm_data = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                             |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,191|45): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 191, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	LOAD_IMM_DATA: coverpoint seq_item.load_imm_val {
+	                        |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,194|25): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 194, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins load_imm_data = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                                  |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,195|50): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 195, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        ADD_RESULT: coverpoint seq_item.add_result {
+                             |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,199|29): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 199, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins add_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,200|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 200, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	SUB_RESULT: coverpoint seq_item.sub_result {
+	                     |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,203|22): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 203, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins sub_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,204|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 204, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	OR_RESULT: coverpoint seq_item.or_result {
+	                    |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,207|21): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 207, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins or_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                              |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,208|46): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 208, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	XOR_RESULT: coverpoint seq_item.xor_result {
+	                     |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,211|22): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 211, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins xor_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,212|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 212, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	AND_RESULT: coverpoint seq_item.and_result {
+	                     |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,215|22): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 215, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins and_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,216|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 216, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	MV_RESULT: coverpoint seq_item.mv_result {
+	                    |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,219|21): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 219, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins mv_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                              |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,220|46): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 220, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	SLLI_RESULT: coverpoint seq_item.and_result {
+	                      |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,223|23): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 223, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins and_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,224|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 224, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	SRLI_RESULT: coverpoint seq_item.and_result {
+	                      |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,227|23): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 227, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins and_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,228|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 228, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	SRAI_RESULT: coverpoint seq_item.and_result {
+	                      |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,231|23): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 231, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins and_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,232|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 232, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	LUI_RESULT: coverpoint seq_item.and_result {
+	                     |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,235|22): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 235, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins and_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,236|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 236, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	L_ADDR_RESULT: coverpoint seq_item.and_result {
+	                        |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,239|25): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 239, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins and_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,240|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 240, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	S_ADDR_RESULT: coverpoint seq_item.and_result {
+	                        |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,243|25): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 243, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+            bins and_result = {[32'h0000_0000:32'hFFFF_FFFF]};
+                                               |
+xmvlog: *E,EXPIDN (./../UVME/env/C_ISA_coverage.sv,244|47): expecting an identifier [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 244, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+    function new(string name = "C_ISA_coverage", uvm_component parent);
+               |
+xmvlog: *E,NEWOIC (./../UVME/env/C_ISA_coverage.sv,250|15): The class constructor method 'new' is only allowed within a class declaration.
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 250, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+        super.new(name, parent);
+            |
+xmvlog: *E,CLSSPX (./../UVME/env/C_ISA_coverage.sv,251|12): 'super' can only be used within a class scope that derives from a base class.
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 251, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+endclass
+       |
+xmvlog: *E,EXPENP (./../UVME/env/C_ISA_coverage.sv,265|7): Expecting the keyword 'endpackage' [SystemVerilog].
+(`include file: ./../UVME/env/C_ISA_coverage.sv line 265, file: ./../UVME/package/C_ISA_pkg.sv line 41)
+	package worklib.C_ISA_pkg:sv
+		errors: 58, warnings: 0
+file: ./../UVME/top/data_memory.sv
+	module worklib.data_memory:sv
+		errors: 0, warnings: 0
+file: ./../UVME/top/C_ISA_top.sv
+  import C_ISA_pkg::*;
+                 |
+xmvlog: *E,NOPBIND (./../UVME/top/C_ISA_top.sv,4|17): Package C_ISA_pkg could not be bound.
+	module worklib.C_ISA_top:sv
+		errors: 1, warnings: 0
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	20.09-s009: Exiting on Mar 23, 2023 at 04:37:46 IST  (total: 00:00:02)

@@ -1,0 +1,597 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+#
+# Groups
+#
+if {[catch {group get -using [list ALU en]}]} {
+set createdGroup([list ALU en]) 1
+catch {group new -name {ALU en} -overlay 0}
+}
+if {[catch {group get -using [list ADD]}]} {
+set createdGroup([list ADD]) 1
+catch {group new -name ADD -overlay 0}
+}
+if {[catch {group get -using [list SUB]}]} {
+set createdGroup([list SUB]) 1
+catch {group new -name SUB -overlay 0}
+}
+if {[catch {group get -using [list AND]}]} {
+set createdGroup([list AND]) 1
+catch {group new -name AND -overlay 0}
+}
+if {[catch {group get -using [list OR]}]} {
+set createdGroup([list OR]) 1
+catch {group new -name OR -overlay 0}
+}
+if {[catch {group get -using [list XOR]}]} {
+set createdGroup([list XOR]) 1
+catch {group new -name XOR -overlay 0}
+}
+if {[catch {group get -using [list SRLI]}]} {
+set createdGroup([list SRLI]) 1
+catch {group new -name SRLI -overlay 0}
+}
+if {[catch {group get -using [list SRAI]}]} {
+set createdGroup([list SRAI]) 1
+catch {group new -name SRAI -overlay 0}
+}
+if {[catch {group get -using [list SLLI]}]} {
+set createdGroup([list SLLI]) 1
+catch {group new -name SLLI -overlay 0}
+}
+if {[catch {group get -using [list MV]}]} {
+set createdGroup([list MV]) 1
+catch {group new -name MV -overlay 0}
+}
+if {[catch {group get -using [list LWSP]}]} {
+set createdGroup([list LWSP]) 1
+catch {group new -name LWSP -overlay 0}
+}
+if {[catch {group get -using [list SWSP]}]} {
+set createdGroup([list SWSP]) 1
+catch {group new -name SWSP -overlay 0}
+}
+if {[catch {group get -using [list LI]}]} {
+set createdGroup([list LI]) 1
+catch {group new -name LI -overlay 0}
+}
+if {[catch {group get -using [list LUI]}]} {
+set createdGroup([list LUI]) 1
+catch {group new -name LUI -overlay 0}
+}
+if {[info exists createdGroup([list ALU en])]} {
+group using {ALU en}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.alu_ctrl[11:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.xor_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.or_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.and_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.nop_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.mvi_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.srl_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sra_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sll_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.j_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.jal_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.jalr_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.jr_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.lui_en}]} ]
+}
+
+if {[info exists createdGroup([list ADD])]} {
+group using ADD
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.rslt[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.sum[32:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.carry}]} ]
+}
+
+if {[info exists createdGroup([list SUB])]} {
+group using SUB
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.rslt[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.diff[32:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.borrow}]} ]
+}
+
+if {[info exists createdGroup([list AND])]} {
+group using AND
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.and_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.and_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.and_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.and_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.and_inst.rslt[31:0]}]} ]
+}
+
+if {[info exists createdGroup([list OR])]} {
+group using OR
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.or_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.or_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.or_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.or_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.or_inst.rslt[31:0]}]} ]
+}
+
+if {[info exists createdGroup([list XOR])]} {
+group using XOR
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.xor_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.xor_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.xor_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.xor_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.xor_inst.rslt[31:0]}]} ]
+}
+
+if {[info exists createdGroup([list SRLI])]} {
+group using SRLI
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.srl_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.srl_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.srl_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.srl_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.srl_inst.rslt[31:0]}]} ]
+}
+
+if {[info exists createdGroup([list SRAI])]} {
+group using SRAI
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sra_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sra_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sra_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sra_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sra_inst.result[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sra_inst.rslt[31:0]}]} ]
+}
+
+if {[info exists createdGroup([list SLLI])]} {
+group using SLLI
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sll_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sll_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sll_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sll_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sll_inst.rslt[31:0]}]} ]
+}
+
+if {[info exists createdGroup([list MV])]} {
+group using MV
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.mvi_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.mvi_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.mvi_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.mvi_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.mvi_inst.result[31:0]}]} ]
+}
+
+if {[info exists createdGroup([list LWSP])]} {
+group using LWSP
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.DATA_MEM.id_ex_mem_rd_en}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.data_mem_read_en}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.data_mem_read_addr[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.data_mem_read_data_i[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.mem_wb_mem_to_reg_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.data_mem_read_data_i[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_write_data[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_write_data[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_write_data_1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_wr_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.rd[4:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[3]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[9]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[8]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[2]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[27]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[19]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[11]}]} ]
+}
+
+if {[info exists createdGroup([list SWSP])]} {
+group using SWSP
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.mem_wr_en}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.data_mem_write_en_o}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.data_mem_write_addr_o[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.data_mem_write_data_o[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.mem[9284]}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.mem[9152]}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.mem[9108]}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.mem[13679]}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.mem[6516]}]} ] \
+    [subst  {[format {C_ISA_top.DATA_MEM.mem[700]}]} ] \
+    [subst  {[format {C_ISA_top.dut.rs2[4:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.rs2_data[31:0]}]} ]
+}
+
+if {[info exists createdGroup([list LI])]} {
+group using LI
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.rd[4:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.wr_data_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.wr_data[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[6]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[1]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[3]}]} ]
+}
+
+if {[info exists createdGroup([list LUI])]} {
+group using LUI
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[2]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.rd[4:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.wr_data_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.wr_data[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[6]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[3]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[1]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[2]}]} ]
+}
+
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.risc_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.risc_rst}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instruction[15:0]}]}
+	} ]]
+waveform format $id -radix %b
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.instruction_r[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.invalid_instruction_valid_w}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.opcode[1:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.imm_r[31:0]}]}
+	} ]]
+waveform format $id -radix %d
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.imm_r1[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.imm_val[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[2]}]}
+	} ]]
+waveform format $id -radix %x
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.func2[1:0]}]}
+	} ]]
+waveform format $id -radix %b
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.func3[2:0]}]}
+	} ]]
+waveform format $id -radix %b
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.func4[3:0]}]}
+	} ]]
+waveform format $id -radix %b
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.func6[5:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.DATA_MEM.data_mem_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.invalid_instruction_valid_w}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.invalid_instruction_valid_o}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.imm_val[31:0]}]}
+	} ]]
+waveform format $id -radix %x
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.DATA_MEM.mem[0:16383]}]}
+	} ]]
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[31:0]}]}
+	} ]]
+waveform hierarchy collapse $id
+
+set groupId0 [waveform add -groups LI]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {C_ISA_top.dut.reg_file_inst.rd[4:0]}]} {-radix %d}
+    {[format {C_ISA_top.dut.reg_file_inst.wr_data_en}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.wr_data[31:0]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[6]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[0]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[1]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[3]}]} {}
+}] childcmds {
+    {
+        set id $gpID0
+        waveform hierarchy collapse $id
+    }
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+waveform hierarchy collapse $groupId0
+
+
+set groupId0 [waveform add -groups LUI]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[2]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.rd[4:0]}]} {-radix %d}
+    {[format {C_ISA_top.dut.reg_file_inst.wr_data_en}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.wr_data[31:0]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[6]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[3]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[1]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[0]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[2]}]} {}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+waveform hierarchy collapse $groupId0
+
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.DATA_MEM.data_mem_read_en}]}
+	} ]]
+
+set groupId0 [waveform add -groups LWSP]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {C_ISA_top.DATA_MEM.id_ex_mem_rd_en}]} {}
+    {[format {C_ISA_top.DATA_MEM.data_mem_read_en}]} {}
+    {[format {C_ISA_top.DATA_MEM.data_mem_read_addr[31:0]}]} {-radix %d}
+    {[format {C_ISA_top.DATA_MEM.data_mem_read_data_i[31:0]}]} {}
+    {[format {C_ISA_top.dut.mem_wb_mem_to_reg_en}]} {}
+    {[format {C_ISA_top.dut.data_mem_read_data_i[31:0]}]} {}
+    {[format {C_ISA_top.dut.reg_write_data[31:0]}]} {}
+    {[format {C_ISA_top.dut.reg_write_data[31:0]}]} {}
+    {[format {C_ISA_top.dut.reg_write_data_1[31:0]}]} {}
+    {[format {C_ISA_top.dut.reg_wr_en}]} {}
+    {[format {C_ISA_top.dut.rd[4:0]}]} {-radix %d}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[3]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[9]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[8]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[2]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[27]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[19]}]} {}
+    {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[11]}]} {}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+waveform hierarchy collapse $groupId0
+
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.DATA_MEM.data_mem_write_en_o}]}
+	} ]]
+
+set groupId0 [waveform add -groups SWSP]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {C_ISA_top.dut.mem_wr_en}]} {}
+    {[format {C_ISA_top.DATA_MEM.data_mem_write_en_o}]} {}
+    {[format {C_ISA_top.DATA_MEM.data_mem_write_addr_o[31:0]}]} {-radix %d}
+    {[format {C_ISA_top.DATA_MEM.data_mem_write_data_o[31:0]}]} {}
+    {[format {C_ISA_top.DATA_MEM.mem[9284]}]} {}
+    {[format {C_ISA_top.DATA_MEM.mem[9152]}]} {}
+    {[format {C_ISA_top.DATA_MEM.mem[9108]}]} {}
+    {[format {C_ISA_top.DATA_MEM.mem[13679]}]} {}
+    {[format {C_ISA_top.DATA_MEM.mem[6516]}]} {}
+    {[format {C_ISA_top.DATA_MEM.mem[700]}]} {}
+    {[format {C_ISA_top.dut.rs2[4:0]}]} {-radix %d}
+    {[format {C_ISA_top.dut.rs2_data[31:0]}]} {}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.alu_inst.alu_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.alu_inst.alu_rst}]}
+	} ]]
+
+set groupId0 [waveform add -groups {{ALU en}}]
+waveform hierarchy collapse $groupId0
+
+
+set groupId0 [waveform add -groups ADD]
+
+
+set groupId0 [waveform add -groups SUB]
+waveform hierarchy collapse $groupId0
+
+
+set groupId0 [waveform add -groups AND]
+waveform hierarchy collapse $groupId0
+
+
+set groupId0 [waveform add -groups OR]
+waveform hierarchy collapse $groupId0
+
+
+set groupId0 [waveform add -groups XOR]
+waveform hierarchy collapse $groupId0
+
+
+set groupId0 [waveform add -groups SRLI]
+waveform hierarchy collapse $groupId0
+
+
+set groupId0 [waveform add -groups SRAI]
+waveform hierarchy collapse $groupId0
+
+
+set groupId0 [waveform add -groups SLLI]
+waveform hierarchy collapse $groupId0
+
+
+set groupId0 [waveform add -groups MV]
+waveform hierarchy collapse $groupId0
+
+
+waveform xview limits 0 27.364ns
+waveform set -signalfilter p

@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(23Mar2023:04:49:37):( xrun -access +rwc -f compile_list.f -svseed 3309 +UVM_TESTNAME=C_ISA_addi4sp_test +define+UVM_REPORT_DISABLE_FILE_LINE -coverage all -covdut riscv_top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d )

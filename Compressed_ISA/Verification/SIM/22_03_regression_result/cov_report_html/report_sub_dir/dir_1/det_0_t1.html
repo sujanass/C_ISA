@@ -1,0 +1,250 @@
+<HTML>
+<HEAD>
+<link type="text/css" rel="stylesheet" href="../../imc.css"></link>
+<script type="text/javascript" src="../../sortable.js"></script>
+<TITLE>IMC Report: ./cov_report_html</TITLE></HEAD>
+<BODY>
+<A NAME="_topcov"></A>
+<P class="summary_title">Coverage   Summary Report, Instance-Based</P>
+
+<P class="fs"><A STYLE="float: left" class="namet" HREF="../../index.html">Top Level Summary</A><A STYLE="float: right" class="namet" HREF="../../legend.html">Legend and Help</A></P>
+<BR>
+<TABLE class="detail_header"><TR class="detail"><TD>
+
+<B>Instance name: </B>riscv_top<BR>
+
+<B>Type name: </B>riscv_top<BR>
+
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv</A><BR>
+
+</TD></TR></TABLE>
+
+<BR>
+<P class="subtitle">Coverage Summary Report, Instance-Based</P>
+<TABLE class="sortable sml summary_table" id="totalTable">
+
+
+<TR><TH class="wht">Overall</TH>
+<TH class="wht">Overall Covered</TH>
+<TH class="wht">Block</TH>
+<TH class="wht">Expression</TH>
+<TH class="wht">Toggle</TH>
+<TH class="wht">FSM&nbsp;State</TH>
+<TH class="wht">FSM&nbsp;Transition</TH>
+<TH class="wht">Assertion</TH>
+<TH class="wht">CoverGroup</TH>
+<TH class="wht">CoverGroup Covered</TH>
+<TH class="wht">name</TH>
+
+</TR>
+
+<TR><TD class="range95to99"><A HREF="">96.24%</A></TD>
+<TD class="range90to94"><A HREF="">93.37%&nbsp;(986/1056/3)</A></TD>
+<TD class="range100"><A HREF="#_Blockcov">100.00%&nbsp;(11/11)</A></TD>
+<TD class="range95to99"><A HREF="#_Expressioncov">95.45%&nbsp;(21/22/3)</A></TD>
+<TD class="range90to94"><A HREF="#_Togglecov">93.26%&nbsp;(954/1023)</A></TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="namecell">riscv_top</TD>
+
+</TR>
+
+
+</TABLE>
+<A NAME="_Blockcov"></A>
+<P class="detail_title">     Uncovered Block Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top<BR>
+<B>Type name: </B>riscv_top<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv</A><BR><B>Number of uncovered blocks: </B>0 of 11<BR>
+<B>Number of unreachable blocks: </B>0<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+Count  Block Line  Kind                 Origin Source Code                    
+------------------------------------------------------------------------------
+
+0 items found
+
+</PRE>
+<A NAME="_Expressioncov"></A>
+<P class="detail_title">     Uncovered Expression Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top<BR>
+<B>Type name: </B>riscv_top<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv</A><BR><B>Number of uncovered expressions: </B>1 of 22<BR>
+<B>Number of unreachable expressions: </B>0<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+3.1    | 66.67% (2/3/1) | 198    | data_mem_write_en ? ld_sd_addr_w : {DATA_WIDTH{1'b0}} 
+
+<B>index: </B><B>3.1</B><B> grade: </B><B>66.67% (2/3/1)</B><B> line: </B><B>198</B><B> source: </B><B>assign      data_mem_write_addr     = (data_mem_write_en)    ? ld_sd_addr_w         : {DATA_WIDTH{1'b0}}     ;</B>
+
+data_mem_write_en ? ld_sd_addr_w : {DATA_WIDTH{1'b0}}<BR>
+<B><</B>-------<B>1</B>-------<B>></B>   <B><</B>----<B>2</B>-----<B>></B>   <B><</B>-------<B>3</B>--------<B>></B>
+
+index     | hit   | rval | &lt;1&gt; &lt;2&gt; &lt;3&gt; 
+---------------------------------------
+3.1.4     | 0     | 0    | 1   0   -   
+
+
+</PRE>
+<A NAME="_Togglecov"></A>
+<P class="detail_title">     Uncovered Toggle Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top<BR>
+<B>Type name: </B>riscv_top<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv</A><BR><B>Number of uncovered signal bits: </B>69 of 1023<BR>
+<B>Number of unreachable signal bits: </B>0<BR>
+<B>Number of signal bits partially toggled(rise): </B>30 of 1023<BR>
+<B>Number of signal bits partially toggled(fall): </B>0 of 1023<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          1          0          data_mem_read_data_i[17]  
+0          1          0          data_mem_read_data_i[8]   
+0          1          0          data_mem_write_data_o[28] 
+0          1          0          data_mem_write_data_o[27] 
+0          1          0          data_mem_write_data_o[12] 
+0          1          0          data_mem_write_data_o[9]  
+0          1          0          data_mem_write_data_o[3]  
+0          1          0          data_mem_write_data_o[1]  
+0          1          0          data_mem_write_addr_o[29] 
+0          1          0          data_mem_write_addr_o[27] 
+0          1          0          data_mem_write_addr_o[26] 
+0          1          0          data_mem_write_addr_o[16] 
+0          1          0          data_mem_write_addr_o[15] 
+0          1          0          data_mem_write_addr_o[14] 
+0          0          0          func3[2]                  
+0          0          0          func3[1]                  
+0          0          0          func3[0]                  
+0          0          0          e_break_valid_w           
+0          0          0          rd_data[31]               
+0          0          0          rd_data[30]               
+0          0          0          rd_data[29]               
+0          0          0          rd_data[28]               
+0          0          0          rd_data[27]               
+0          0          0          rd_data[26]               
+0          0          0          rd_data[25]               
+0          0          0          rd_data[24]               
+0          0          0          rd_data[23]               
+0          0          0          rd_data[22]               
+0          0          0          rd_data[21]               
+0          0          0          rd_data[20]               
+0          0          0          rd_data[19]               
+0          0          0          rd_data[18]               
+0          0          0          rd_data[17]               
+0          0          0          rd_data[16]               
+0          0          0          rd_data[15]               
+0          0          0          rd_data[14]               
+0          0          0          rd_data[13]               
+0          0          0          rd_data[12]               
+0          0          0          rd_data[11]               
+0          0          0          rd_data[10]               
+0          0          0          rd_data[9]                
+0          0          0          rd_data[8]                
+0          0          0          rd_data[7]                
+0          0          0          rd_data[6]                
+0          0          0          rd_data[5]                
+0          0          0          rd_data[4]                
+0          0          0          rd_data[3]                
+0          0          0          rd_data[2]                
+0          0          0          rd_data[1]                
+0          0          0          rd_data[0]                
+0          0          0          mem_wb_mem_wr_en          
+0          1          0          mem_out[17]               
+0          1          0          mem_out[8]                
+0          1          0          data_mem_write_data[28]   
+0          1          0          data_mem_write_data[27]   
+0          1          0          data_mem_write_data[12]   
+0          1          0          data_mem_write_data[9]    
+0          1          0          data_mem_write_data[3]    
+0          1          0          data_mem_write_data[1]    
+0          1          0          data_mem_write_addr[29]   
+0          1          0          data_mem_write_addr[27]   
+0          1          0          data_mem_write_addr[26]   
+0          1          0          data_mem_write_addr[16]   
+0          1          0          data_mem_write_addr[15]   
+0          1          0          data_mem_write_addr[14]   
+0          1          0          mem_to_mux[17]            
+0          1          0          mem_to_mux[8]             
+0          0          0          mem_rd_en_mem_out         
+0          0          0          mem_rd_en_mem_out_1       
+
+</PRE>
+<A NAME="_Fsmcov"></A>
+<P class="detail_title">     Uncovered Fsm Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top<BR>
+<B>Type name: </B>riscv_top<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv</A><BR>
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+
+0 items found
+
+</PRE>
+<A NAME="_Assertioncov"></A>
+<P class="detail_title">     Uncovered Assertion Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top<BR>
+<B>Type name: </B>riscv_top<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv</A><BR><B>Number of uncovered assertions: </B>0 of 0<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+Finished Failed Assertion                      Line  Source Code                    
+------------------------------------------------------------------------------------
+
+0 items found
+
+</PRE>
+<A NAME="_CoverGroupcov"></A>
+<P class="detail_title">     Covered+Uncovered+Excluded+UNR CoverGroup Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top<BR>
+<B>Type name: </B>riscv_top<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv</A><BR><B>Number of covered cover bins: </B>0 of 0<BR>
+<B>Number of uncovered cover bins: </B>0 of 0<BR>
+<B>Number of excluded cover bins: </B>0<BR>
+
+
+</TD></TR></TABLE>
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+
+0 items found
+
+</PRE>

@@ -1,0 +1,460 @@
+IMC(64): 20.09-s003: (c) Copyright 1995-2021 Cadence Design Systems Inc - Simulator version: 20.09-s009 - Coverage engine version: 20.09-s009
+Starting batch mode
+imc> merge -overwrite -out cov_merged_output test*
+imc: *W,MGOPOW: The merge output directory cov_work/scope/cov_merged_output will be overwritten.
+imc: *I,MERGL1: Merging Simulation Coverage ...
+----------------------------
+imc: *I,MERGL1: Preparing target model ...
+imc: *I,MERGL1: Reading model of primary run (cov_work/scope/test_sv10143) as initial model: cov_work/scope/icc_094e99cf_00000000.ucm
+imc: *I,MERGL1: Target model generated successfully.
+imc: *I,MERGL1: Projecting Simulation ucd data into the target model ...
+imc: *I,MERGL2:   cov_work/scope/test_sv10143:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv12851:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv14066:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv14630:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv15379:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv15586:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv16027:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv16816:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv16861:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv17342:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv17575:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv17627:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv17696:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv1795:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv18060:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv19243:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv19397:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv19460:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv19761:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv2083:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv21679:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv2201:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv22169:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv22477:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv22589:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv22644:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv22655:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv2268:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv22773:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv23424:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv2345:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv23785:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv24825:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv2527:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv26309:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv26482:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv26673:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv267:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv26927:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv26954:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv27171:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv2826:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv29042:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv2957:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv2968:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv30001:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv31322:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv31610:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv31938:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv32753:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv32863:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv32969:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv34603:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv34817:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv36941:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv37484:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv37586:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv3768:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv37756:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv37793:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv37997:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv38264:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv38429:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv38786:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv38989:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv39732:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv41150:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv41362:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv41753:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv41831:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv42327:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv42665:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv42916:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv43267:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv4336:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv45119:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv45669:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv45934:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv45994:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv46887:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv47169:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv48582:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv49037:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv49662:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv49706:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv50182:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv50491:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv50910:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv51073:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv51223:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv5184:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv51870:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv52067:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv5218:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv5225:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv52996:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv53159:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv53417:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv5359:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv53895:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv53923:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv5394:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv54043:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv54256:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv54686:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv55929:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv5616:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv56343:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv56895:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv57052:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv57308:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv57656:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv57966:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv5804:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv59570:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv59847:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv5985:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv59915:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv59939:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv60:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv60157:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv60329:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv61433:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv6178:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv6199:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv63235:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv63386:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv64302:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv64811:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv65183:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv65229:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv65670:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv660:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv66101:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv66165:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv66778:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv66971:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv67475:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv67509:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv68618:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv68747:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv68920:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv69226:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv69766:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv70997:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv71135:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv71410:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv71977:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv71998:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv7215:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv72469:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv72881:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv73007:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv73949:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv74090:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv74100:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv74587:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv74697:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv74942:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv75092:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv75148:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv75372:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv75883:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv7613:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv76727:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv76878:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv77245:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv77270:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv77325:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv77745:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv77969:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv79159:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv79670:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv80018:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv80203:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv80753:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv81835:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv81922:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv81947:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv82335:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv8409:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv84417:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv85571:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv85770:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv86899:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv8720:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv87227:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv87838:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv87898:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv8809:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv88297:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv88607:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv88829:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv89778:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv89860:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv91543:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv9196:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv91977:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv92372:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv92691:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv9304:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv93219:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv9439:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv9459:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv95060:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv95385:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv96366:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv96609:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv97492:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv97598:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv97955:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv98398:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv98445:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv98698:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv99294:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL2:   cov_work/scope/test_sv99716:
+imc: *I,MERGL3:       Data is projected in to the target model.
+imc: *I,MERGL1: Writing output database cov_work/scope/cov_merged_output:
+imc: *I,MERGL2:   Model: cov_work/scope/cov_merged_output/icc_094e99cf_00000000.ucm
+imc: *I,MERGL2:   Data : cov_work/scope/cov_merged_output/icc_094e99cf_00000000.ucd
+imc: *I,MERGL1: No Specman coverage databases found in the runs.
+Total conflicts during target model creation: 0
+Total items not merged                      : 0
+Total runs not considered during target model creation: 0
+Total runs not merged                                 : 0
+imc> load -run ./cov_work/scope/cov_merged_output
+imc: *I,RUNLD: Successfully loaded run /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/Verification/SIM/cov_work/scope/cov_merged_output.
+imc> # exclude -inst GP_DMA_TOP.DMA_top_inst.DMA_FSM_ctrl_inst -toggle {start_reg[1-31]}
+imc> report -detail -all -text -out cov_report.txt
+imc: *W,REPDEP: This is a legacy report and no future enhancement is planned for this report. It is recommended that you use the 'report_metrics' command and generate a dynamic report.
+imc> report -detail -text -out cov_uncovered_report.txt
+imc: *W,REPDEP: This is a legacy report and no future enhancement is planned for this report. It is recommended that you use the 'report_metrics' command and generate a dynamic report.
+imc> report -detail -html -out ./cov_report_html
+imc: *W,REPDEP: This is a legacy report and no future enhancement is planned for this report. It is recommended that you use the 'report_metrics' command and generate a dynamic report.
+imc: *E,OUTEXS: 0utput directory ./cov_report_html already exists, and will not be overwritten. Use the '-overwrite' option to overwrite the existing directory, or specify a different directory name with the -out option, and rerun the command.

@@ -1,0 +1,406 @@
+<HTML>
+<HEAD>
+<link type="text/css" rel="stylesheet" href="../../imc.css"></link>
+<script type="text/javascript" src="../../sortable.js"></script>
+<TITLE>IMC Report: ./cov_report_html</TITLE></HEAD>
+<BODY>
+<A NAME="_topcov"></A>
+<P class="summary_title">Coverage   Summary Report, Instance-Based</P>
+
+<P class="fs"><A STYLE="float: left" class="namet" HREF="../../index.html">Top Level Summary</A><A STYLE="float: right" class="namet" HREF="../../legend.html">Legend and Help</A></P>
+<BR>
+<TABLE class="detail_header"><TR class="detail"><TD>
+
+<B>Instance name: </B><A HREF="../dir_1/summ_0_t1.html" class="namet">riscv_top</A>.alu_inst<BR>
+
+<B>Type name: </B>alu<BR>
+
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv</A><BR>
+
+</TD></TR></TABLE>
+
+<BR>
+<P class="subtitle">Coverage Summary Report, Instance-Based</P>
+<TABLE class="sortable sml summary_table" id="totalTable">
+
+
+<TR><TH class="wht">Overall</TH>
+<TH class="wht">Overall Covered</TH>
+<TH class="wht">Block</TH>
+<TH class="wht">Expression</TH>
+<TH class="wht">Toggle</TH>
+<TH class="wht">FSM&nbsp;State</TH>
+<TH class="wht">FSM&nbsp;Transition</TH>
+<TH class="wht">Assertion</TH>
+<TH class="wht">CoverGroup</TH>
+<TH class="wht">CoverGroup Covered</TH>
+<TH class="wht">name</TH>
+
+</TR>
+
+<TR><TD class="range90to94"><A HREF="">90.14%</A></TD>
+<TD class="range80to84"><A HREF="">82.13%&nbsp;(749/912)</A></TD>
+<TD class="range100"><A HREF="#_Blockcov">100.00%&nbsp;(62/62)</A></TD>
+<TD class="range90to94"><A HREF="#_Expressioncov">90.70%&nbsp;(78/86)</A></TD>
+<TD class="range75to79"><A HREF="#_Togglecov">79.71%&nbsp;(609/764)</A></TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="namecell">alu_inst</TD>
+
+</TR>
+
+
+</TABLE>
+<A NAME="_Blockcov"></A>
+<P class="detail_title">     Uncovered Block Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.alu_inst<BR>
+<B>Type name: </B>alu<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv</A><BR><B>Number of uncovered blocks: </B>0 of 62<BR>
+<B>Number of unreachable blocks: </B>0<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+Count  Block Line  Kind                 Origin Source Code                    
+------------------------------------------------------------------------------
+
+0 items found
+
+</PRE>
+<A NAME="_Expressioncov"></A>
+<P class="detail_title">     Uncovered Expression Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.alu_inst<BR>
+<B>Type name: </B>alu<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv</A><BR><B>Number of uncovered expressions: </B>8 of 86<BR>
+<B>Number of unreachable expressions: </B>0<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+12.1   | 50.00% (1/2)  | 118    | (alu_ctrl_r1 == 12'b000000000101) ? 1'b1 : 1'b0    
+12.2   | 50.00% (1/2)  | 118    | (alu_ctrl_r1 == 12'b000000000101)                  
+13.1   | 50.00% (1/2)  | 119    | (alu_ctrl_r1 == 12'b100000100110) ? 1'b1 : 1'b0    
+13.2   | 50.00% (1/2)  | 119    | (alu_ctrl_r1 == 12'b100000100110)                  
+14.1   | 50.00% (1/2)  | 120    | (alu_ctrl_r1 == 12'b000000010010) ? 1'b1 : 1'b0    
+14.2   | 50.00% (1/2)  | 120    | (alu_ctrl_r1 == 12'b000000010010)                  
+15.1   | 50.00% (1/2)  | 121    | (alu_ctrl_r1 == 12'b000000010101) ? 1'b1 : 1'b0    
+15.2   | 50.00% (1/2)  | 121    | (alu_ctrl_r1 == 12'b000000010101)                  
+
+<B>index: </B><B>12.1</B><B> grade: </B><B>50.00% (1/2)</B><B> line: </B><B>118</B><B> source: </B><B>assign jal_en   = ((alu_ctrl_r1 == 12'b0000000_001_01)) ? 1'b1:1'b0;</B>
+
+(alu_ctrl_r1 == 12'b000000000101) ? 1'b1 : 1'b0<BR>
+<B><</B>---------------<B>1</B>---------------<B>></B>
+
+index     | hit   | rval | &lt;1&gt; 
+-------------------------------
+12.1.1    | 0     | 1    | 1   
+
+<B>index: </B><B>12.2</B><B> grade: </B><B>50.00% (1/2)</B><B> line: </B><B>118</B><B> source: </B><B>assign jal_en   = ((alu_ctrl_r1 == 12'b0000000_001_01)) ? 1'b1:1'b0;</B>
+
+(alu_ctrl_r1 == 12'b000000000101)<BR>
+ <B><</B>----<B>4</B>----<B>></B>    <B><</B>------<B>5</B>-------<B>></B>
+
+index     | hit   | &lt;4&gt; &lt;5&gt; 
+-------------------------------- '=='
+12.2.1    | 0     | lhs == rhs  
+
+<B>index: </B><B>13.1</B><B> grade: </B><B>50.00% (1/2)</B><B> line: </B><B>119</B><B> source: </B><B>assign jalr_en  = ((alu_ctrl_r1 == 12'b100000_1001_10)) ? 1'b1:1'b0;</B>
+
+(alu_ctrl_r1 == 12'b100000100110) ? 1'b1 : 1'b0<BR>
+<B><</B>---------------<B>1</B>---------------<B>></B>
+
+index     | hit   | rval | &lt;1&gt; 
+-------------------------------
+13.1.1    | 0     | 1    | 1   
+
+<B>index: </B><B>13.2</B><B> grade: </B><B>50.00% (1/2)</B><B> line: </B><B>119</B><B> source: </B><B>assign jalr_en  = ((alu_ctrl_r1 == 12'b100000_1001_10)) ? 1'b1:1'b0;</B>
+
+(alu_ctrl_r1 == 12'b100000100110)<BR>
+ <B><</B>----<B>4</B>----<B>></B>    <B><</B>------<B>5</B>-------<B>></B>
+
+index     | hit   | &lt;4&gt; &lt;5&gt; 
+-------------------------------- '=='
+13.2.1    | 0     | lhs == rhs  
+
+<B>index: </B><B>14.1</B><B> grade: </B><B>50.00% (1/2)</B><B> line: </B><B>120</B><B> source: </B><B>assign jr_en    = ((alu_ctrl_r1 == 12'b0_00000_0_100_10)) ? 1'b1:1'b0;</B>
+
+(alu_ctrl_r1 == 12'b000000010010) ? 1'b1 : 1'b0<BR>
+<B><</B>---------------<B>1</B>---------------<B>></B>
+
+index     | hit   | rval | &lt;1&gt; 
+-------------------------------
+14.1.1    | 0     | 1    | 1   
+
+<B>index: </B><B>14.2</B><B> grade: </B><B>50.00% (1/2)</B><B> line: </B><B>120</B><B> source: </B><B>assign jr_en    = ((alu_ctrl_r1 == 12'b0_00000_0_100_10)) ? 1'b1:1'b0;</B>
+
+(alu_ctrl_r1 == 12'b000000010010)<BR>
+ <B><</B>----<B>4</B>----<B>></B>    <B><</B>------<B>5</B>-------<B>></B>
+
+index     | hit   | &lt;4&gt; &lt;5&gt; 
+-------------------------------- '=='
+14.2.1    | 0     | lhs == rhs  
+
+<B>index: </B><B>15.1</B><B> grade: </B><B>50.00% (1/2)</B><B> line: </B><B>121</B><B> source: </B><B>assign j_en     = ((alu_ctrl_r1 == 12'b0000000_101_01)) ? 1'b1:1'b0;</B>
+
+(alu_ctrl_r1 == 12'b000000010101) ? 1'b1 : 1'b0<BR>
+<B><</B>---------------<B>1</B>---------------<B>></B>
+
+index     | hit   | rval | &lt;1&gt; 
+-------------------------------
+15.1.1    | 0     | 1    | 1   
+
+<B>index: </B><B>15.2</B><B> grade: </B><B>50.00% (1/2)</B><B> line: </B><B>121</B><B> source: </B><B>assign j_en     = ((alu_ctrl_r1 == 12'b0000000_101_01)) ? 1'b1:1'b0;</B>
+
+(alu_ctrl_r1 == 12'b000000010101)<BR>
+ <B><</B>----<B>4</B>----<B>></B>    <B><</B>------<B>5</B>-------<B>></B>
+
+index     | hit   | &lt;4&gt; &lt;5&gt; 
+-------------------------------- '=='
+15.2.1    | 0     | lhs == rhs  
+
+
+</PRE>
+<A NAME="_Togglecov"></A>
+<P class="detail_title">     Uncovered Toggle Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.alu_inst<BR>
+<B>Type name: </B>alu<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv</A><BR><B>Number of uncovered signal bits: </B>155 of 764<BR>
+<B>Number of unreachable signal bits: </B>0<BR>
+<B>Number of signal bits partially toggled(rise): </B>13 of 764<BR>
+<B>Number of signal bits partially toggled(fall): </B>0 of 764<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          0          0          alu_ctrl_r[11]            
+0          0          0          alu_ctrl_r[10]            
+0          0          0          alu_ctrl_r[9]             
+0          0          0          alu_ctrl_r[8]             
+0          0          0          alu_ctrl_r[7]             
+0          0          0          alu_ctrl_r[6]             
+0          0          0          alu_ctrl_r[5]             
+0          0          0          alu_ctrl_r[4]             
+0          0          0          alu_ctrl_r[3]             
+0          0          0          alu_ctrl_r[2]             
+0          0          0          alu_ctrl_r[1]             
+0          0          0          alu_ctrl_r[0]             
+0          0          0          oper1_sign                
+0          0          0          oper2_sign                
+0          0          0          jal_pc_r[19]              
+0          0          0          jal_pc_r[18]              
+0          0          0          jal_pc_r[17]              
+0          0          0          jal_pc_r[16]              
+0          0          0          jal_pc_r[15]              
+0          0          0          jal_pc_r[14]              
+0          0          0          jal_pc_r[13]              
+0          0          0          jal_pc_r[12]              
+0          0          0          jal_pc_r[11]              
+0          0          0          jal_pc_r[10]              
+0          0          0          jal_pc_r[9]               
+0          0          0          jal_pc_r[8]               
+0          0          0          jal_pc_r[7]               
+0          0          0          jal_pc_r[6]               
+0          0          0          jal_pc_r[5]               
+0          0          0          jal_pc_r[4]               
+0          0          0          jal_pc_r[3]               
+0          0          0          jal_pc_r[2]               
+0          0          0          jal_pc_r[1]               
+0          0          0          jal_pc_r[0]               
+0          0          0          jal_en                    
+0          0          0          jalr_en                   
+0          1          0          lui_op[15]                
+0          1          0          lui_op[11]                
+0          1          0          lui_op[10]                
+0          1          0          lui_op[9]                 
+0          1          0          lui_op[8]                 
+0          1          0          lui_op[6]                 
+0          1          0          lui_op[5]                 
+0          0          0          lui_op[4]                 
+0          0          0          lui_op[3]                 
+0          0          0          jalr_op[31]               
+0          0          0          jalr_op[30]               
+0          0          0          jalr_op[29]               
+0          0          0          jalr_op[28]               
+0          0          0          jalr_op[27]               
+0          0          0          jalr_op[26]               
+0          0          0          jalr_op[25]               
+0          0          0          jalr_op[24]               
+0          0          0          jalr_op[23]               
+0          0          0          jalr_op[22]               
+0          0          0          jalr_op[21]               
+0          0          0          jalr_op[20]               
+0          0          0          jalr_op[19]               
+0          0          0          jalr_op[18]               
+0          0          0          jalr_op[17]               
+0          0          0          jalr_op[16]               
+0          0          0          jalr_op[15]               
+0          0          0          jalr_op[14]               
+0          0          0          jalr_op[13]               
+0          0          0          jalr_op[12]               
+0          0          0          jalr_op[11]               
+0          0          0          jalr_op[10]               
+0          0          0          jalr_op[9]                
+0          0          0          jalr_op[8]                
+0          0          0          jalr_op[7]                
+0          0          0          jalr_op[6]                
+0          0          0          jalr_op[5]                
+0          0          0          jalr_op[4]                
+0          0          0          jalr_op[3]                
+0          0          0          jalr_op[2]                
+0          0          0          jalr_op[1]                
+0          0          0          jalr_op[0]                
+0          0          0          jal_op[31]                
+0          0          0          jal_op[30]                
+0          0          0          jal_op[29]                
+0          0          0          jal_op[28]                
+0          0          0          jal_op[27]                
+0          0          0          jal_op[26]                
+0          0          0          jal_op[25]                
+0          0          0          jal_op[24]                
+0          0          0          jal_op[23]                
+0          0          0          jal_op[22]                
+0          0          0          jal_op[21]                
+0          0          0          jal_op[20]                
+0          0          0          jal_op[19]                
+0          0          0          jal_op[18]                
+0          0          0          jal_op[17]                
+0          0          0          jal_op[16]                
+0          0          0          jal_op[15]                
+0          0          0          jal_op[14]                
+0          0          0          jal_op[13]                
+0          0          0          jal_op[12]                
+0          0          0          jal_op[11]                
+0          0          0          jal_op[10]                
+0          0          0          jal_op[9]                 
+0          0          0          jal_op[8]                 
+0          0          0          jal_op[7]                 
+0          0          0          jal_op[6]                 
+0          0          0          jal_op[5]                 
+0          0          0          jal_op[4]                 
+0          0          0          jal_op[3]                 
+0          0          0          jal_op[2]                 
+0          0          0          jal_op[1]                 
+0          0          0          jal_op[0]                 
+0          0          0          sll_op[30]                
+0          0          0          sll_op[10]                
+0          0          0          sll_op[2]                 
+0          0          0          sll_op[1]                 
+0          0          0          sll_op[0]                 
+0          0          0          xor_op[12]                
+0          0          0          srl_op[31]                
+0          0          0          srl_op[30]                
+0          0          0          srl_op[28]                
+0          1          0          or_op[21]                 
+0          1          0          or_op[20]                 
+0          1          0          or_op[19]                 
+0          1          0          or_op[3]                  
+0          1          0          or_op[1]                  
+0          1          0          and_op[19]                
+0          0          0          and_op[4]                 
+0          0          0          mvi_op[26]                
+0          0          0          mvi_op[21]                
+0          0          0          mvi_op[7]                 
+0          0          0          nop_zero                  
+0          0          0          nop_op[31]                
+0          0          0          nop_op[30]                
+0          0          0          nop_op[29]                
+0          0          0          nop_op[28]                
+0          0          0          nop_op[27]                
+0          0          0          nop_op[26]                
+0          0          0          nop_op[25]                
+0          0          0          nop_op[24]                
+0          0          0          nop_op[23]                
+0          0          0          nop_op[22]                
+0          0          0          nop_op[21]                
+0          0          0          nop_op[20]                
+0          0          0          nop_op[19]                
+0          0          0          nop_op[18]                
+0          0          0          nop_op[17]                
+0          0          0          nop_op[16]                
+0          0          0          nop_op[15]                
+0          0          0          nop_op[14]                
+0          0          0          nop_op[13]                
+0          0          0          nop_op[12]                
+0          0          0          nop_op[11]                
+0          0          0          nop_op[10]                
+0          0          0          nop_op[9]                 
+0          0          0          nop_op[8]                 
+0          0          0          jr_en                     
+0          0          0          j_en                      
+
+</PRE>
+<A NAME="_Fsmcov"></A>
+<P class="detail_title">     Uncovered Fsm Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.alu_inst<BR>
+<B>Type name: </B>alu<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv</A><BR>
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+
+0 items found
+
+</PRE>
+<A NAME="_Assertioncov"></A>
+<P class="detail_title">     Uncovered Assertion Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.alu_inst<BR>
+<B>Type name: </B>alu<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv</A><BR><B>Number of uncovered assertions: </B>0 of 0<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+Finished Failed Assertion                      Line  Source Code                    
+------------------------------------------------------------------------------------
+
+0 items found
+
+</PRE>
+<A NAME="_CoverGroupcov"></A>
+<P class="detail_title">     Covered+Uncovered+Excluded+UNR CoverGroup Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.alu_inst<BR>
+<B>Type name: </B>alu<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv</A><BR><B>Number of covered cover bins: </B>0 of 0<BR>
+<B>Number of uncovered cover bins: </B>0 of 0<BR>
+<B>Number of excluded cover bins: </B>0<BR>
+
+
+</TD></TR></TABLE>
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+
+0 items found
+
+</PRE>

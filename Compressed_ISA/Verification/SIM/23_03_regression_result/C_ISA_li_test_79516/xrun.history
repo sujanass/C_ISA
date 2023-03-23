@@ -1,0 +1,1 @@
+s1(23Mar2023:04:58:35):  xrun -access +rwc -f compile_list.f -svseed 79516 +UVM_TESTNAME=C_ISA_li_test +define+UVM_REPORT_DISABLE_FILE_LINE -coverage all -covdut riscv_top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d 

@@ -1,0 +1,170 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+#
+# Groups
+#
+if {[catch {group get -using [list fwd]}]} {
+set createdGroup([list fwd]) 1
+catch {group new -name fwd -overlay 0}
+}
+if {[catch {group get -using [list ADDITION]}]} {
+set createdGroup([list ADDITION]) 1
+catch {group new -name ADDITION -overlay 0}
+}
+if {[catch {group get -using [list REG DATA]}]} {
+set createdGroup([list REG DATA]) 1
+catch {group new -name {REG DATA} -overlay 0}
+}
+if {[catch {group get -using [list SUBTRACTION]}]} {
+set createdGroup([list SUBTRACTION]) 1
+catch {group new -name SUBTRACTION -overlay 0}
+}
+if {[info exists createdGroup([list fwd])]} {
+group using fwd
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.store_data_r[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.forward_b[1:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.forward_a[1:0]}]} ]
+}
+
+if {[info exists createdGroup([list ADDITION])]} {
+group using ADDITION
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.alu_clk}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.alu_rst}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.rslt[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.sum[32:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.add_inst.carry}]} ]
+}
+
+if {[info exists createdGroup([list REG DATA])]} {
+group using {REG DATA}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.rd_addr1[4:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.dataout1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.rd_addr2[4:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.dataout2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.rs1_data[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.rs2_data[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.alu_data_in_1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.alu_data_in_2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.alu_out[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.wr_data_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.wr_addr[4:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.reg_file_inst.wr_data[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.reg_write_data[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.fwd_inst.reg_write_data_1[31:0]}]} ]
+}
+
+if {[info exists createdGroup([list SUBTRACTION])]} {
+group using SUBTRACTION
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.en}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.zero}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.oper1[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.oper2[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.rslt[31:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.diff[32:0]}]} ] \
+    [subst  {[format {C_ISA_top.dut.alu_inst.sub_inst.borrow}]} ]
+}
+
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.risc_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.risc_rst}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instruction[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.instruction_r[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.instruction[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.invalid_instruction_w}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.invalid_instruction_valid_o}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.ebreak_valid_o_r}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.opcode[1:0]}]}
+	} ]]
+waveform format $id -radix %x
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.func2[1:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.func3[2:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.func4[3:0]}]}
+	} ]]
+waveform format $id -radix %b
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.func6[5:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.rs1[4:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.rs2[4:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.instr_decoder.rd[4:0]}]}
+	} ]]
+set id [waveform add -cdivider divider]
+
+set groupId0 [waveform add -groups ADDITION]
+
+
+set groupId0 [waveform add -groups SUBTRACTION]
+
+set id [waveform add -cdivider divider]
+
+set groupId0 [waveform add -groups {{REG DATA}}]
+
+
+set groupId0 [waveform add -groups fwd]
+waveform hierarchy collapse $groupId0
+
+set id [waveform add -signals [subst  {
+	{[format {C_ISA_top.dut.reg_file_inst.dp_ram_inst.regfile[31:0]}]}
+	} ]]
+waveform hierarchy collapse $id
+
+waveform xview limits 0 12.688ns

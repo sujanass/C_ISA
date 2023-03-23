@@ -1,0 +1,16 @@
+s1(22Mar2023:20:38:13):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_li_test -uvmhome CDNS-1.1d 
+s2(22Mar2023:21:08:22):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_li_test -uvmhome CDNS-1.1d 
+s3(22Mar2023:21:33:53):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_nop_test -uvmhome CDNS-1.1d 
+s4(23Mar2023:00:41:13):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_add_test -uvmhome CDNS-1.1d 
+s5(23Mar2023:00:45:13):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_nop_test -uvmhome CDNS-1.1d 
+s6(23Mar2023:00:46:35):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_sub_test -uvmhome CDNS-1.1d 
+s7(23Mar2023:00:48:43):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_and_test -uvmhome CDNS-1.1d 
+s8(23Mar2023:00:50:37):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_sub_test -uvmhome CDNS-1.1d 
+s9(23Mar2023:00:51:39):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_mv_test -uvmhome CDNS-1.1d 
+s10(23Mar2023:00:52:57):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_srli_test -uvmhome CDNS-1.1d 
+s11(23Mar2023:00:55:10):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_srai_test -uvmhome CDNS-1.1d 
+s12(23Mar2023:01:00:19):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_addi_test -uvmhome CDNS-1.1d 
+s13(23Mar2023:01:59:26):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_addi4sp_test -uvmhome CDNS-1.1d 
+s14(23Mar2023:02:02:21):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_sub_test -uvmhome CDNS-1.1d 
+s15(23Mar2023:02:05:18):  xrun -access +rwc -f compile_list.f +UVM_TESTNAME=C_ISA_add_test -uvmhome CDNS-1.1d 
+s16(23Mar2023:04:37:42):  xrun -access +rwc -f compile_list.f -svseed 15881 +UVM_TESTNAME=C_ISA_ebreak_test +define+UVM_REPORT_DISABLE_FILE_LINE -coverage all -covdut riscv_top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d 

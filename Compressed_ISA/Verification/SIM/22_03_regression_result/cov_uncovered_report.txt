@@ -1,0 +1,652 @@
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+<> User: vvtrainee42
+
+Host: compute-srv4.eda.atme.in
+
+Report date: Wed 22 Mar 2023 06:59:04 IST
+
+Report options: -detail -text -out cov_uncovered_report.txt
+
+Coverage database path: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/Verification/SIM/cov_work/scope/cov_merged_output
+
+Coverage model files: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/Verification/SIM/cov_work/scope/cov_merged_output/icc_094e99cf_00000000.ucm
+
+Coverage data files: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/Verification/SIM/cov_work/scope/cov_merged_output/icc_094e99cf_00000000.ucd
+
+CCF files:  /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/Verification/SIM/cov_files/cov_cmd.cf
+    set_covergroup -new_instance_reporting
+    set_covergroup -per_instance_default_one
+    set_implicit_block_scoring -off
+    set_assign_scoring
+    set_expr_scoring -all
+    select_functional
+
+
+Coverage database date: Wed 22 Mar 2023 04:16:13 IST
+
+*** There were no refinement files applied ***
+
+ <>
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+Coverage Table Legend
+---------------------
+  EXCL       excluded using refinement rule
+  P-EXCL     excluded from parent
+  U-EXCL     excluded and unreachable by IEV
+  T-EXCL     excluded from type
+  S-EXCL     smart excluded using refinement rule
+  EXCL(S)    smart indirect excluded
+  EMPTY      all children are excluded
+  CONST      marked constant during simulation
+  IGN        marked ignored during simulation
+  UNG        marked ungradeable during simulation
+  DES        marked deselected during simulation
+  UNR        marked unreachable by IEV
+  UNG-Expr   expression marked ungradeable during simulation
+  UNG-Toggle toggle marked ungradeable during simulation
+
+
+Uncovered Block Detail Report, Instance Based
+=============================================
+
+Instance name: riscv_top.instr_decoder
+Type name: instruction_decoder
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/instruction_decoder.sv
+Number of uncovered blocks: 3 of 69
+Number of unreachable blocks: 0
+
+Count  Block Line  Kind                 Origin Source Code                    
+------------------------------------------------------------------------------
+0      27    268   a case item of       208    begin                          
+0      48    490   a case item of       412    begin                          
+0      68    757   a case item of       678    begin                          
+
+Instance name: riscv_top.alu_inst.sra_inst
+Type name: sra
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv
+Number of uncovered blocks: 1 of 38
+Number of unreachable blocks: 0
+
+Count  Block Line  Kind                 Origin Source Code                    
+------------------------------------------------------------------------------
+0      35    790   a case item of       756    begin                          
+
+Instance name: riscv_top.addr_gen_inst
+Type name: addr_gen
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_sd_address_gen.sv
+Number of uncovered blocks: 1 of 27
+Number of unreachable blocks: 0
+
+Count  Block Line  Kind                 Origin Source Code                    
+------------------------------------------------------------------------------
+0      20    147   a case item of       125    begin                          
+
+Uncovered Expression Detail Report, Instance Based
+==================================================
+
+Expression coverage Table Legend
+---------------------
+  -      don't care
+  e      event for event-or expressions
+  O (odd), E (even), B (both), X (not scored),
+         I (marked ignore) for parity trees
+  Y (covered), N (not covered), C (constant), 
+  P (one or more inputs for this bit have been padded) for vector scoring, 
+  d=== , b=== shows which bit differs in vector scoring 
+  rval   Resulting value of the expression for coverage purposes given
+         the input values
+  <-n->  Shows the n-th term composition
+
+
+Instance name: riscv_top
+Type name: riscv_top
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv
+Number of uncovered expressions: 1 of 22
+Number of unreachable expressions: 0
+
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+3.1    | 66.67% (2/3/1) | 198    | data_mem_write_en ? ld_sd_addr_w : {DATA_WIDTH{1'b0}} 
+
+index: 3.1 grade: 66.67% (2/3/1) line: 198 source: assign      data_mem_write_addr     = (data_mem_write_en)    ? ld_sd_addr_w         : {DATA_WIDTH{1'b0}}     ;
+
+data_mem_write_en ? ld_sd_addr_w : {DATA_WIDTH{1'b0}}
+<-------1------->   <----2----->   <-------3-------->
+
+index     | hit   | rval | <1> <2> <3> 
+---------------------------------------
+3.1.4     | 0     | 0    | 1   0   -   
+
+
+Instance name: riscv_top.instr_decoder
+Type name: instruction_decoder
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/instruction_decoder.sv
+Number of uncovered expressions: 23 of 142
+Number of unreachable expressions: 0
+
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+1.1    | 58.33% (14/24) | 74     | (((instruction[1:0] == 2'b00) || (instruction[1:0] == 2'b01)) && (((((instruction[15:13] == 3'b010) || (instruction[15:13] == 3'b110)) || (instruction[15:13] == 3'b101)) || (instruction[15:13] == 3'b111)) || (instruction[15:13] == 3'b100))) ? {2'd0,instruction[9:7]} : instruction[11:7] 
+1.5    | 50.00% (1/2)  | 74     | (instruction[15:13] == 3'b101)                     
+3.1    | 64.29% (18/28) | 76     | ((instruction[1:0] == 2'b00) && ((instruction[15:13] == 3'b010) || (instruction[15:13] == 3'b000))) ? instruction[4:2] : (((instruction[1:0] == 2'b01) && ((((instruction[15:13] == 3'b111) || (instruction[15:13] == 3'b110)) || (instruction[15:13] == 3'b101)) || (instruction[15:13] == 3'b100))) ? {2'd0,instruction[9:7]} : instruction[11:7]) 
+3.6    | 50.00% (1/2)  | 76     | (instruction[15:13] == 3'b101)                     
+5.1    | 75.00% (3/4)  | 79     | ((instruction[15:10] == 6'b100011) && (instruction[1:0] == 2'b01)) ? instruction[15:10] : 6'd0 
+
+index: 1.1 grade: 58.33% (14/24) line: 74 source: assign source_reg1 	= (((instruction[1:0] == 2'b00) || (instruction[1:0] == 2'b01)) && ((instruction[15:13] == 3'b010) || (instruction[15:13] == 3'b110) || (instruction[15:13] == 3'b101) || (instruction[15:13] == 3'b111) || (instruction[15:13] == 3'b100))) ? {2'd0,instruction[9:7]} : instruction[11:7];
+
+(((instruction[1:0] == 2'b00) || (instruction[1:0] == 2'b01)) && (((((instruction[15:13] == 3'b010) || (instruction[15:13] == 3'b110)) || (instruction[15:13] == 3'b101)) || (instruction[15:13] == 3'b111)) || (instruction[15:13] == 3'b100))) ? {2'd0,instruction[9:7]} : instruction[11:7]
+   <------1------->              <------------3------------>         <-------------4-------------->    <-------------5-------------->     <-------------6-------------->     <-------------7-------------->     <-------------8-------------->     <----------9---------->   <------10------->
+
+index     | hit   | rval | <1> <3> <4> <5> <6> <7> <8> <9> <10> 
+----------------------------------------------------------------
+1.1.3     | 0     | 1    | 0   -   -   -   -   -   1   1   -    
+1.1.4     | 0     | 1    | -   1   -   -   -   1   -   1   -    
+1.1.5     | 0     | 1    | 0   -   -   -   -   1   -   1   -    
+1.1.6     | 0     | 1    | -   1   -   -   1   -   -   1   -    
+1.1.7     | 0     | 1    | -   1   -   1   -   -   -   1   -    
+1.1.8     | 0     | 1    | 0   -   -   -   1   -   -   1   -    
+1.1.17    | 0     | 0    | 0   -   -   -   -   1   -   0   -    
+1.1.18    | 0     | 0    | -   1   -   -   1   -   -   0   -    
+1.1.19    | 0     | 0    | -   1   -   1   -   -   -   0   -    
+1.1.20    | 0     | 0    | 0   -   -   -   1   -   -   0   -    
+
+index: 1.5 grade: 50.00% (1/2) line: 74 source: assign source_reg1 	= (((instruction[1:0] == 2'b00) || (instruction[1:0] == 2'b01)) && ((instruction[15:13] == 3'b010) || (instruction[15:13] == 3'b110) || (instruction[15:13] == 3'b101) || (instruction[15:13] == 3'b111) || (instruction[15:13] == 3'b100))) ? {2'd0,instruction[9:7]} : instruction[11:7];
+
+(instruction[15:13] == 3'b101)
+ <-------17------->    <-18->
+
+index     | hit   | <17>  <18>  
+-------------------------------- '=='
+1.5.1     | 0     | lhs == rhs  
+
+index: 3.1 grade: 64.29% (18/28) line: 76 source: assign dest_reg	   	= ((instruction[1:0] == 2'b00) && (instruction[15:13] == 3'b010 || instruction[15:13] == 3'b000)) ? instruction[4:2] : ((instruction[1:0] == 2'b01) && ((instruction[15:13] == 3'b111) || (instruction[15:13] == 3'b110) || (instruction[15:13] == 3'b101) || (instruction[15:13] == 3'b100))) ?  {2'd0,instruction[9:7]}: instruction[11:7];
+
+((instruction[1:0] == 2'b00) && ((instruction[15:13] == 3'b010) || (instruction[15:13] == 3'b000))) ? instruction[4:2] : (((instruction[1:0] == 2'b01) && ((((instruction[15:13] == 3'b111) || (instruction[15:13] == 3'b110)) || (instruction[15:13] == 3'b101)) || (instruction[15:13] == 3'b100))) ? {2'd0,instruction[9:7]} : instruction[11:7])
+  <------1------->               <-------------3-------------->     <-------4-------->                <------6------->     <------------7------------>       <-------------8-------------->    <-------------9-------------->     <-------------10------------->     <-------------11------------->     <---------12---------->   <------13------->
+
+index     | hit   | rval | <1> <3> <4> <6> <7> <8> <9> <10> <11> <12> <13> 
+---------------------------------------------------------------------------
+3.1.4     | 0     | 1    | -   0   1   -   1   -   -   1    -    1    -    
+3.1.6     | 0     | 1    | -   0   1   -   1   -   1   -    -    1    -    
+3.1.7     | 0     | 1    | 1   -   -   -   1   -   -   1    -    1    -    
+3.1.9     | 0     | 1    | -   0   1   -   1   1   -   -    -    1    -    
+3.1.11    | 0     | 1    | 1   -   -   -   1   -   1   -    -    1    -    
+3.1.14    | 0     | 1    | 1   -   -   -   1   1   -   -    -    1    -    
+3.1.18    | 0     | 0    | -   0   1   -   1   -   -   1    -    0    -    
+3.1.20    | 0     | 0    | -   0   1   -   1   -   1   -    -    0    -    
+3.1.21    | 0     | 0    | 1   -   -   -   1   -   -   1    -    0    -    
+3.1.25    | 0     | 0    | 1   -   -   -   1   -   1   -    -    0    -    
+
+index: 3.6 grade: 50.00% (1/2) line: 76 source: assign dest_reg	   	= ((instruction[1:0] == 2'b00) && (instruction[15:13] == 3'b010 || instruction[15:13] == 3'b000)) ? instruction[4:2] : ((instruction[1:0] == 2'b01) && ((instruction[15:13] == 3'b111) || (instruction[15:13] == 3'b110) || (instruction[15:13] == 3'b101) || (instruction[15:13] == 3'b100))) ?  {2'd0,instruction[9:7]}: instruction[11:7];
+
+(instruction[15:13] == 3'b101)
+ <-------22------->    <-23->
+
+index     | hit   | <22>  <23>  
+-------------------------------- '=='
+3.6.1     | 0     | lhs == rhs  
+
+index: 5.1 grade: 75.00% (3/4) line: 79 source: assign func6        = ((instruction[15:10] == 6'b100011) && (instruction[1:0] == 2'b01) ) ? instruction[15:10] : 6'd0  ;
+
+((instruction[15:10] == 6'b100011) && (instruction[1:0] == 2'b01)) ? instruction[15:10] : 6'd0
+ <---------------1--------------->    <------------2------------>    <-------3-------->
+
+index     | hit   | rval | <1> <2> <3> 
+---------------------------------------
+5.1.2     | 0     | 0    | -   -   0   
+
+
+Instance name: riscv_top.alu_inst
+Type name: alu
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv
+Number of uncovered expressions: 8 of 86
+Number of unreachable expressions: 0
+
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+12.1   | 50.00% (1/2)  | 118    | (alu_ctrl_r1 == 12'b000000000101) ? 1'b1 : 1'b0    
+12.2   | 50.00% (1/2)  | 118    | (alu_ctrl_r1 == 12'b000000000101)                  
+13.1   | 50.00% (1/2)  | 119    | (alu_ctrl_r1 == 12'b100000100110) ? 1'b1 : 1'b0    
+13.2   | 50.00% (1/2)  | 119    | (alu_ctrl_r1 == 12'b100000100110)                  
+14.1   | 50.00% (1/2)  | 120    | (alu_ctrl_r1 == 12'b000000010010) ? 1'b1 : 1'b0    
+14.2   | 50.00% (1/2)  | 120    | (alu_ctrl_r1 == 12'b000000010010)                  
+15.1   | 50.00% (1/2)  | 121    | (alu_ctrl_r1 == 12'b000000010101) ? 1'b1 : 1'b0    
+15.2   | 50.00% (1/2)  | 121    | (alu_ctrl_r1 == 12'b000000010101)                  
+
+index: 12.1 grade: 50.00% (1/2) line: 118 source: assign jal_en   = ((alu_ctrl_r1 == 12'b0000000_001_01)) ? 1'b1:1'b0;
+
+(alu_ctrl_r1 == 12'b000000000101) ? 1'b1 : 1'b0
+<---------------1--------------->
+
+index     | hit   | rval | <1> 
+-------------------------------
+12.1.1    | 0     | 1    | 1   
+
+index: 12.2 grade: 50.00% (1/2) line: 118 source: assign jal_en   = ((alu_ctrl_r1 == 12'b0000000_001_01)) ? 1'b1:1'b0;
+
+(alu_ctrl_r1 == 12'b000000000101)
+ <----4---->    <------5------->
+
+index     | hit   | <4>   <5>   
+-------------------------------- '=='
+12.2.1    | 0     | lhs == rhs  
+
+index: 13.1 grade: 50.00% (1/2) line: 119 source: assign jalr_en  = ((alu_ctrl_r1 == 12'b100000_1001_10)) ? 1'b1:1'b0;
+
+(alu_ctrl_r1 == 12'b100000100110) ? 1'b1 : 1'b0
+<---------------1--------------->
+
+index     | hit   | rval | <1> 
+-------------------------------
+13.1.1    | 0     | 1    | 1   
+
+index: 13.2 grade: 50.00% (1/2) line: 119 source: assign jalr_en  = ((alu_ctrl_r1 == 12'b100000_1001_10)) ? 1'b1:1'b0;
+
+(alu_ctrl_r1 == 12'b100000100110)
+ <----4---->    <------5------->
+
+index     | hit   | <4>   <5>   
+-------------------------------- '=='
+13.2.1    | 0     | lhs == rhs  
+
+index: 14.1 grade: 50.00% (1/2) line: 120 source: assign jr_en    = ((alu_ctrl_r1 == 12'b0_00000_0_100_10)) ? 1'b1:1'b0;
+
+(alu_ctrl_r1 == 12'b000000010010) ? 1'b1 : 1'b0
+<---------------1--------------->
+
+index     | hit   | rval | <1> 
+-------------------------------
+14.1.1    | 0     | 1    | 1   
+
+index: 14.2 grade: 50.00% (1/2) line: 120 source: assign jr_en    = ((alu_ctrl_r1 == 12'b0_00000_0_100_10)) ? 1'b1:1'b0;
+
+(alu_ctrl_r1 == 12'b000000010010)
+ <----4---->    <------5------->
+
+index     | hit   | <4>   <5>   
+-------------------------------- '=='
+14.2.1    | 0     | lhs == rhs  
+
+index: 15.1 grade: 50.00% (1/2) line: 121 source: assign j_en     = ((alu_ctrl_r1 == 12'b0000000_101_01)) ? 1'b1:1'b0;
+
+(alu_ctrl_r1 == 12'b000000010101) ? 1'b1 : 1'b0
+<---------------1--------------->
+
+index     | hit   | rval | <1> 
+-------------------------------
+15.1.1    | 0     | 1    | 1   
+
+index: 15.2 grade: 50.00% (1/2) line: 121 source: assign j_en     = ((alu_ctrl_r1 == 12'b0000000_101_01)) ? 1'b1:1'b0;
+
+(alu_ctrl_r1 == 12'b000000010101)
+ <----4---->    <------5------->
+
+index     | hit   | <4>   <5>   
+-------------------------------- '=='
+15.2.1    | 0     | lhs == rhs  
+
+
+Instance name: riscv_top.addr_gen_inst
+Type name: addr_gen
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_sd_address_gen.sv
+Number of uncovered expressions: 2 of 55
+Number of unreachable expressions: 0
+
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+5.1    | 83.33% (5/6)  | 97     | ((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && (id_ex_reg_wr_en && (id_ex_mem_wr_en || id_ex_mem_rd_en))) && (id_ex_rd == id_ex_rs1) 
+8.1    | 80.00% (4/5/1) | 154    | (ld_valid_o | sd_valid_o) ? (oper1 + oper2) : {DATA_WIDTH{1'b0}} 
+
+index: 5.1 grade: 83.33% (5/6) line: 97 source: assign rs1_fwd_id_ex 	= ((id_ex_rd !={GPR_ADDR_WIDTH{1'b0}}) && (id_ex_reg_wr_en  && (id_ex_mem_wr_en || id_ex_mem_rd_en)) && (id_ex_rd  == id_ex_rs1));
+
+((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && (id_ex_reg_wr_en && (id_ex_mem_wr_en || id_ex_mem_rd_en))) && (id_ex_rd == id_ex_rs1)
+ <----------------1----------------->     <------2------>     <------3------>    <------4------>       <----------5---------->
+
+index     | hit   | rval | <1> <2> <3> <4> <5> 
+-----------------------------------------------
+5.1.2     | 0     | 1    | 1   1   1   -   1   
+
+index: 8.1 grade: 80.00% (4/5/1) line: 154 source: assign addr_temp = (ld_valid_o |sd_valid_o) ? (oper1 + oper2) : {DATA_WIDTH{1'b0}} ;
+
+(ld_valid_o | sd_valid_o) ? (oper1 + oper2) : {DATA_WIDTH{1'b0}}
+ <---1---->   <---2---->    <------3------>   <-------4-------->
+
+index     | hit   | rval | <1> <2> <3> <4> 
+-------------------------------------------
+8.1.5     | 0     | 0    | -   1   0   -   
+
+
+Instance name: riscv_top.load_hazard_ctrl_inst
+Type name: load_hazard_ctrl
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv
+Number of uncovered expressions: 2 of 24
+Number of unreachable expressions: 0
+
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+1.1    | 80.00% (4/5)  | 40     | (((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2))) ? 1'b1 : 1'b0 
+3.1    | 80.00% (4/5)  | 51     | ((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2)) 
+
+index: 1.1 grade: 80.00% (4/5) line: 40 source: assign stall_en = (((id_ex_rd!={GPR_ADDR_WIDTH{1'b0}}) && (id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2)))) ? 1'b1 : 1'b0;
+
+(((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2))) ? 1'b1 : 1'b0
+  <----------------1----------------->    <------2------>      <----------3---------->    <----------4---------->
+
+index     | hit   | rval | <1> <2> <3> <4> 
+-------------------------------------------
+1.1.1     | 0     | 1    | 1   1   -   1   
+
+index: 3.1 grade: 80.00% (4/5) line: 51 source: if((id_ex_rd!={GPR_ADDR_WIDTH{1'b0}}) && (id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2)))
+
+((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2))
+ <----------------1----------------->    <------2------>      <----------3---------->    <----------4---------->
+
+index     | hit   | rval | <1> <2> <3> <4> 
+-------------------------------------------
+3.1.1     | 0     | 1    | 1   1   -   1   
+
+
+Uncovered Toggle Detail Report, Instance Based
+==============================================
+
+Instance name: riscv_top
+Type name: riscv_top
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/top.sv
+Number of uncovered signal bits: 39 of 1023
+Number of unreachable signal bits: 0
+Number of signal bits partially toggled(rise): 0 of 1023
+Number of signal bits partially toggled(fall): 0 of 1023
+
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          0          0          func3[2]                  
+0          0          0          func3[1]                  
+0          0          0          func3[0]                  
+0          0          0          e_break_valid_w           
+0          0          0          rd_data[31]               
+0          0          0          rd_data[30]               
+0          0          0          rd_data[29]               
+0          0          0          rd_data[28]               
+0          0          0          rd_data[27]               
+0          0          0          rd_data[26]               
+0          0          0          rd_data[25]               
+0          0          0          rd_data[24]               
+0          0          0          rd_data[23]               
+0          0          0          rd_data[22]               
+0          0          0          rd_data[21]               
+0          0          0          rd_data[20]               
+0          0          0          rd_data[19]               
+0          0          0          rd_data[18]               
+0          0          0          rd_data[17]               
+0          0          0          rd_data[16]               
+0          0          0          rd_data[15]               
+0          0          0          rd_data[14]               
+0          0          0          rd_data[13]               
+0          0          0          rd_data[12]               
+0          0          0          rd_data[11]               
+0          0          0          rd_data[10]               
+0          0          0          rd_data[9]                
+0          0          0          rd_data[8]                
+0          0          0          rd_data[7]                
+0          0          0          rd_data[6]                
+0          0          0          rd_data[5]                
+0          0          0          rd_data[4]                
+0          0          0          rd_data[3]                
+0          0          0          rd_data[2]                
+0          0          0          rd_data[1]                
+0          0          0          rd_data[0]                
+0          0          0          mem_wb_mem_wr_en          
+0          0          0          mem_rd_en_mem_out         
+0          0          0          mem_rd_en_mem_out_1       
+
+Instance name: riscv_top.instr_decoder
+Type name: instruction_decoder
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/instruction_decoder.sv
+Number of uncovered signal bits: 3 of 213
+Number of unreachable signal bits: 0
+Number of signal bits partially toggled(rise): 0 of 213
+Number of signal bits partially toggled(fall): 0 of 213
+
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          0          0          func6[4]                  
+0          0          0          func6[3]                  
+0          0          0          func6[2]                  
+
+Instance name: riscv_top.alu_inst
+Type name: alu
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv
+Number of uncovered signal bits: 137 of 764
+Number of unreachable signal bits: 0
+Number of signal bits partially toggled(rise): 6 of 764
+Number of signal bits partially toggled(fall): 0 of 764
+
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          0          0          alu_ctrl_r[11]            
+0          0          0          alu_ctrl_r[10]            
+0          0          0          alu_ctrl_r[9]             
+0          0          0          alu_ctrl_r[8]             
+0          0          0          alu_ctrl_r[7]             
+0          0          0          alu_ctrl_r[6]             
+0          0          0          alu_ctrl_r[5]             
+0          0          0          alu_ctrl_r[4]             
+0          0          0          alu_ctrl_r[3]             
+0          0          0          alu_ctrl_r[2]             
+0          0          0          alu_ctrl_r[1]             
+0          0          0          alu_ctrl_r[0]             
+0          0          0          oper1_sign                
+0          0          0          oper2_sign                
+0          0          0          jal_pc_r[19]              
+0          0          0          jal_pc_r[18]              
+0          0          0          jal_pc_r[17]              
+0          0          0          jal_pc_r[16]              
+0          0          0          jal_pc_r[15]              
+0          0          0          jal_pc_r[14]              
+0          0          0          jal_pc_r[13]              
+0          0          0          jal_pc_r[12]              
+0          0          0          jal_pc_r[11]              
+0          0          0          jal_pc_r[10]              
+0          0          0          jal_pc_r[9]               
+0          0          0          jal_pc_r[8]               
+0          0          0          jal_pc_r[7]               
+0          0          0          jal_pc_r[6]               
+0          0          0          jal_pc_r[5]               
+0          0          0          jal_pc_r[4]               
+0          0          0          jal_pc_r[3]               
+0          0          0          jal_pc_r[2]               
+0          0          0          jal_pc_r[1]               
+0          0          0          jal_pc_r[0]               
+0          0          0          jal_en                    
+0          0          0          jalr_en                   
+0          1          0          lui_op[11]                
+0          1          0          lui_op[10]                
+0          1          0          lui_op[9]                 
+0          1          0          lui_op[8]                 
+0          1          0          lui_op[6]                 
+0          1          0          lui_op[5]                 
+0          0          0          jalr_op[31]               
+0          0          0          jalr_op[30]               
+0          0          0          jalr_op[29]               
+0          0          0          jalr_op[28]               
+0          0          0          jalr_op[27]               
+0          0          0          jalr_op[26]               
+0          0          0          jalr_op[25]               
+0          0          0          jalr_op[24]               
+0          0          0          jalr_op[23]               
+0          0          0          jalr_op[22]               
+0          0          0          jalr_op[21]               
+0          0          0          jalr_op[20]               
+0          0          0          jalr_op[19]               
+0          0          0          jalr_op[18]               
+0          0          0          jalr_op[17]               
+0          0          0          jalr_op[16]               
+0          0          0          jalr_op[15]               
+0          0          0          jalr_op[14]               
+0          0          0          jalr_op[13]               
+0          0          0          jalr_op[12]               
+0          0          0          jalr_op[11]               
+0          0          0          jalr_op[10]               
+0          0          0          jalr_op[9]                
+0          0          0          jalr_op[8]                
+0          0          0          jalr_op[7]                
+0          0          0          jalr_op[6]                
+0          0          0          jalr_op[5]                
+0          0          0          jalr_op[4]                
+0          0          0          jalr_op[3]                
+0          0          0          jalr_op[2]                
+0          0          0          jalr_op[1]                
+0          0          0          jalr_op[0]                
+0          0          0          jal_op[31]                
+0          0          0          jal_op[30]                
+0          0          0          jal_op[29]                
+0          0          0          jal_op[28]                
+0          0          0          jal_op[27]                
+0          0          0          jal_op[26]                
+0          0          0          jal_op[25]                
+0          0          0          jal_op[24]                
+0          0          0          jal_op[23]                
+0          0          0          jal_op[22]                
+0          0          0          jal_op[21]                
+0          0          0          jal_op[20]                
+0          0          0          jal_op[19]                
+0          0          0          jal_op[18]                
+0          0          0          jal_op[17]                
+0          0          0          jal_op[16]                
+0          0          0          jal_op[15]                
+0          0          0          jal_op[14]                
+0          0          0          jal_op[13]                
+0          0          0          jal_op[12]                
+0          0          0          jal_op[11]                
+0          0          0          jal_op[10]                
+0          0          0          jal_op[9]                 
+0          0          0          jal_op[8]                 
+0          0          0          jal_op[7]                 
+0          0          0          jal_op[6]                 
+0          0          0          jal_op[5]                 
+0          0          0          jal_op[4]                 
+0          0          0          jal_op[3]                 
+0          0          0          jal_op[2]                 
+0          0          0          jal_op[1]                 
+0          0          0          jal_op[0]                 
+0          0          0          sll_op[1]                 
+0          0          0          sll_op[0]                 
+0          0          0          srl_op[31]                
+0          0          0          srl_op[30]                
+0          0          0          nop_zero                  
+0          0          0          nop_op[31]                
+0          0          0          nop_op[30]                
+0          0          0          nop_op[29]                
+0          0          0          nop_op[28]                
+0          0          0          nop_op[27]                
+0          0          0          nop_op[26]                
+0          0          0          nop_op[25]                
+0          0          0          nop_op[24]                
+0          0          0          nop_op[23]                
+0          0          0          nop_op[22]                
+0          0          0          nop_op[21]                
+0          0          0          nop_op[20]                
+0          0          0          nop_op[19]                
+0          0          0          nop_op[18]                
+0          0          0          nop_op[17]                
+0          0          0          nop_op[16]                
+0          0          0          nop_op[15]                
+0          0          0          nop_op[14]                
+0          0          0          nop_op[13]                
+0          0          0          nop_op[12]                
+0          0          0          nop_op[11]                
+0          0          0          nop_op[10]                
+0          0          0          nop_op[9]                 
+0          0          0          nop_op[8]                 
+0          0          0          jr_en                     
+0          0          0          j_en                      
+
+Instance name: riscv_top.alu_inst.lui_inst
+Type name: lui
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv
+Number of uncovered signal bits: 6 of 97
+Number of unreachable signal bits: 0
+Number of signal bits partially toggled(rise): 6 of 97
+Number of signal bits partially toggled(fall): 0 of 97
+
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          1          0          lui_out[11]               
+0          1          0          lui_out[10]               
+0          1          0          lui_out[9]                
+0          1          0          lui_out[8]                
+0          1          0          lui_out[6]                
+0          1          0          lui_out[5]                
+
+Instance name: riscv_top.alu_inst.sll_inst
+Type name: sll
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv
+Number of uncovered signal bits: 2 of 98
+Number of unreachable signal bits: 0
+Number of signal bits partially toggled(rise): 0 of 98
+Number of signal bits partially toggled(fall): 0 of 98
+
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          0          0          rslt[1]                   
+0          0          0          rslt[0]                   
+
+Instance name: riscv_top.alu_inst.srl_inst
+Type name: srl
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv
+Number of uncovered signal bits: 2 of 98
+Number of unreachable signal bits: 0
+Number of signal bits partially toggled(rise): 0 of 98
+Number of signal bits partially toggled(fall): 0 of 98
+
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          0          0          rslt[31]                  
+0          0          0          rslt[30]                  
+
+Instance name: riscv_top.alu_inst.nop_inst
+Type name: nop
+File name: /home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/alu.sv
+Number of uncovered signal bits: 25 of 98
+Number of unreachable signal bits: 0
+Number of signal bits partially toggled(rise): 0 of 98
+Number of signal bits partially toggled(fall): 0 of 98
+
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+0          0          0          nop_out[31]               
+0          0          0          nop_out[30]               
+0          0          0          nop_out[29]               
+0          0          0          nop_out[28]               
+0          0          0          nop_out[27]               
+0          0          0          nop_out[26]               
+0          0          0          nop_out[25]               
+0          0          0          nop_out[24]               
+0          0          0          nop_out[23]               
+0          0          0          nop_out[22]               
+0          0          0          nop_out[21]               
+0          0          0          nop_out[20]               
+0          0          0          nop_out[19]               
+0          0          0          nop_out[18]               
+0          0          0          nop_out[17]               
+0          0          0          nop_out[16]               
+0          0          0          nop_out[15]               
+0          0          0          nop_out[14]               
+0          0          0          nop_out[13]               
+0          0          0          nop_out[12]               
+0          0          0          nop_out[11]               
+0          0          0          nop_out[10]               
+0          0          0          nop_out[9]                
+0          0          0          nop_out[8]                
+0          0          0          zero                      
+
+Uncovered Fsm Detail Report, Instance Based
+===========================================
+
+Uncovered Assertion Detail Report, Instance Based
+=================================================
+
+Uncovered CoverGroup Detail Report, Instance Based
+==================================================
+

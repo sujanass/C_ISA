@@ -1,0 +1,420 @@
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_ebreak_test    seed : 15881
+test_name : C_ISA_li_test    seed : 51297
+test_name : C_ISA_swsp_test    seed : 8941
+test_name : C_ISA_lui_test    seed : 18451
+test_name : C_ISA_illegal_instruction_test    seed : 10260
+test_name : C_ISA_reset_test    seed : 11565
+test_name : C_ISA_nop_test    seed : 46631
+test_name : C_ISA_srli_test    seed : 43608
+test_name : C_ISA_sw_test    seed : 96931
+test_name : C_ISA_all_test    seed : 17557
+test_name : C_ISA_add_test    seed : 97889
+test_name : C_ISA_or_test    seed : 93322
+test_name : C_ISA_and_test    seed : 97909
+test_name : C_ISA_addi4sp_test    seed : 36338
+test_name : C_ISA_mv_test    seed : 48476
+test_name : C_ISA_addi_test    seed : 57464
+test_name : C_ISA_xor_test    seed : 96876
+test_name : C_ISA_slli_test    seed : 66013
+test_name : C_ISA_lwsp_test    seed : 95989
+test_name : C_ISA_sub_test    seed : 33256
+test_name : C_ISA_srai_test    seed : 41341
+test_name : C_ISA_srai_test    seed : 64299
+test_name : C_ISA_srai_test    seed : 32786
+test_name : C_ISA_srai_test    seed : 75433
+test_name : C_ISA_srai_test    seed : 92190
+test_name : C_ISA_andi_test    seed : 33438
+test_name : C_ISA_addi16sp_test    seed : 68577
+test_name : C_ISA_lw_test    seed : 71431
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_mv_test    seed : 44820
+test_name : C_ISA_sw_test    seed : 98975
+test_name : C_ISA_slli_test    seed : 76698
+test_name : C_ISA_or_test    seed : 14979
+test_name : C_ISA_li_test    seed : 87953
+test_name : C_ISA_addi16sp_test    seed : 79326
+test_name : C_ISA_ebreak_test    seed : 43765
+test_name : C_ISA_sub_test    seed : 45132
+test_name : C_ISA_swsp_test    seed : 48861
+test_name : C_ISA_addi4sp_test    seed : 39646
+test_name : C_ISA_srli_test    seed : 50384
+test_name : C_ISA_all_test    seed : 27068
+test_name : C_ISA_andi_test    seed : 79666
+test_name : C_ISA_add_test    seed : 32579
+test_name : C_ISA_lwsp_test    seed : 16509
+test_name : C_ISA_lui_test    seed : 18220
+test_name : C_ISA_reset_test    seed : 94345
+test_name : C_ISA_nop_test    seed : 13049
+test_name : C_ISA_and_test    seed : 74108
+test_name : C_ISA_xor_test    seed : 34535
+test_name : C_ISA_illegal_instruction_test    seed : 38344
+test_name : C_ISA_srai_test    seed : 32038
+test_name : C_ISA_srai_test    seed : 20472
+test_name : C_ISA_srai_test    seed : 85171
+test_name : C_ISA_srai_test    seed : 16135
+test_name : C_ISA_srai_test    seed : 36323
+test_name : C_ISA_lw_test    seed : 18611
+test_name : C_ISA_addi_test    seed : 41225
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_addi_test    seed : 30263
+test_name : C_ISA_mv_test    seed : 97381
+test_name : C_ISA_sw_test    seed : 58761
+test_name : C_ISA_lwsp_test    seed : 52657
+test_name : C_ISA_illegal_instruction_test    seed : 15627
+test_name : C_ISA_slli_test    seed : 24391
+test_name : C_ISA_and_test    seed : 62129
+test_name : C_ISA_andi_test    seed : 21515
+test_name : C_ISA_swsp_test    seed : 50203
+test_name : C_ISA_nop_test    seed : 95141
+test_name : C_ISA_li_test    seed : 21447
+test_name : C_ISA_add_test    seed : 80745
+test_name : C_ISA_sub_test    seed : 97693
+test_name : C_ISA_lui_test    seed : 29329
+test_name : C_ISA_or_test    seed : 17347
+test_name : C_ISA_srai_test    seed : 83860
+test_name : C_ISA_srai_test    seed : 69299
+test_name : C_ISA_srai_test    seed : 24195
+test_name : C_ISA_srai_test    seed : 89211
+test_name : C_ISA_srai_test    seed : 21377
+test_name : C_ISA_reset_test    seed : 75788
+test_name : C_ISA_xor_test    seed : 72448
+test_name : C_ISA_all_test    seed : 7850
+test_name : C_ISA_addi4sp_test    seed : 3309
+test_name : C_ISA_ebreak_test    seed : 50376
+test_name : C_ISA_srli_test    seed : 91224
+test_name : C_ISA_addi16sp_test    seed : 48771
+test_name : C_ISA_lw_test    seed : 8862
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_xor_test    seed : 21719
+test_name : C_ISA_and_test    seed : 72977
+test_name : C_ISA_illegal_instruction_test    seed : 37802
+test_name : C_ISA_mv_test    seed : 16017
+test_name : C_ISA_or_test    seed : 13985
+test_name : C_ISA_addi16sp_test    seed : 87733
+test_name : C_ISA_addi4sp_test    seed : 18809
+test_name : C_ISA_li_test    seed : 79516
+test_name : C_ISA_sub_test    seed : 63840
+test_name : C_ISA_all_test    seed : 73597
+test_name : C_ISA_slli_test    seed : 72064
+test_name : C_ISA_nop_test    seed : 8332
+test_name : C_ISA_sw_test    seed : 45965
+test_name : C_ISA_andi_test    seed : 85846
+test_name : C_ISA_lw_test    seed : 33634
+test_name : C_ISA_srli_test    seed : 69981
+test_name : C_ISA_addi_test    seed : 9624
+test_name : C_ISA_lwsp_test    seed : 46043
+test_name : C_ISA_lui_test    seed : 74066
+test_name : C_ISA_add_test    seed : 78791
+test_name : C_ISA_srai_test    seed : 18347
+test_name : C_ISA_srai_test    seed : 98273
+test_name : C_ISA_srai_test    seed : 83881
+test_name : C_ISA_srai_test    seed : 62981
+test_name : C_ISA_srai_test    seed : 31146
+test_name : C_ISA_reset_test    seed : 83048
+test_name : C_ISA_swsp_test    seed : 83485
+test_name : C_ISA_ebreak_test    seed : 96226
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_xor_test    seed : 18852
+test_name : C_ISA_add_test    seed : 56779
+test_name : C_ISA_slli_test    seed : 91909
+test_name : C_ISA_lui_test    seed : 66813
+test_name : C_ISA_addi16sp_test    seed : 90593
+test_name : C_ISA_ebreak_test    seed : 17288
+test_name : C_ISA_sw_test    seed : 62863
+test_name : C_ISA_li_test    seed : 44606
+test_name : C_ISA_illegal_instruction_test    seed : 91022
+test_name : C_ISA_lw_test    seed : 8108
+test_name : C_ISA_addi4sp_test    seed : 42543
+test_name : C_ISA_reset_test    seed : 74364
+test_name : C_ISA_and_test    seed : 98537
+test_name : C_ISA_srli_test    seed : 58431
+test_name : C_ISA_lwsp_test    seed : 76742
+test_name : C_ISA_swsp_test    seed : 12176
+test_name : C_ISA_mv_test    seed : 83842
+test_name : C_ISA_srai_test    seed : 30711
+test_name : C_ISA_srai_test    seed : 77750
+test_name : C_ISA_srai_test    seed : 42255
+test_name : C_ISA_srai_test    seed : 58593
+test_name : C_ISA_srai_test    seed : 16031
+test_name : C_ISA_or_test    seed : 88148
+test_name : C_ISA_nop_test    seed : 40776
+test_name : C_ISA_all_test    seed : 15180
+test_name : C_ISA_sub_test    seed : 54563
+test_name : C_ISA_andi_test    seed : 77991
+test_name : C_ISA_addi_test    seed : 83486
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_sw_test    seed : 63994
+test_name : C_ISA_srai_test    seed : 76737
+test_name : C_ISA_srai_test    seed : 76943
+test_name : C_ISA_srai_test    seed : 3910
+test_name : C_ISA_srai_test    seed : 36176
+test_name : C_ISA_srai_test    seed : 11018
+test_name : C_ISA_xor_test    seed : 54531
+test_name : C_ISA_slli_test    seed : 31744
+test_name : C_ISA_addi4sp_test    seed : 24187
+test_name : C_ISA_lw_test    seed : 82161
+test_name : C_ISA_lwsp_test    seed : 27362
+test_name : C_ISA_sub_test    seed : 20221
+test_name : C_ISA_lui_test    seed : 41094
+test_name : C_ISA_nop_test    seed : 90650
+test_name : C_ISA_and_test    seed : 24252
+test_name : C_ISA_addi16sp_test    seed : 15865
+test_name : C_ISA_add_test    seed : 6967
+test_name : C_ISA_illegal_instruction_test    seed : 7271
+test_name : C_ISA_all_test    seed : 24990
+test_name : C_ISA_li_test    seed : 10883
+test_name : C_ISA_addi_test    seed : 18728
+test_name : C_ISA_andi_test    seed : 28345
+test_name : C_ISA_ebreak_test    seed : 99230
+test_name : C_ISA_srli_test    seed : 42650
+test_name : C_ISA_mv_test    seed : 25176
+test_name : C_ISA_reset_test    seed : 88867
+test_name : C_ISA_swsp_test    seed : 55342
+test_name : C_ISA_or_test    seed : 82272
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_addi4sp_test    seed : 21679
+test_name : C_ISA_add_test    seed : 56573
+test_name : C_ISA_sw_test    seed : 32048
+test_name : C_ISA_nop_test    seed : 59621
+test_name : C_ISA_addi16sp_test    seed : 77211
+test_name : C_ISA_srai_test    seed : 99922
+test_name : C_ISA_srai_test    seed : 82553
+test_name : C_ISA_srai_test    seed : 50979
+test_name : C_ISA_srai_test    seed : 19471
+test_name : C_ISA_srai_test    seed : 2
+test_name : C_ISA_swsp_test    seed : 42332
+test_name : C_ISA_reset_test    seed : 30660
+test_name : C_ISA_srli_test    seed : 56823
+test_name : C_ISA_addi_test    seed : 77541
+test_name : C_ISA_and_test    seed : 20056
+test_name : C_ISA_ebreak_test    seed : 93484
+test_name : C_ISA_lwsp_test    seed : 24348
+test_name : C_ISA_xor_test    seed : 13623
+test_name : C_ISA_mv_test    seed : 89727
+test_name : C_ISA_sub_test    seed : 74720
+test_name : C_ISA_or_test    seed : 99430
+test_name : C_ISA_li_test    seed : 66883
+test_name : C_ISA_illegal_instruction_test    seed : 58529
+test_name : C_ISA_slli_test    seed : 80676
+test_name : C_ISA_lw_test    seed : 42075
+test_name : C_ISA_all_test    seed : 77517
+test_name : C_ISA_lui_test    seed : 95408
+test_name : C_ISA_andi_test    seed : 43521
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_mv_test    seed : 69734
+test_name : C_ISA_xor_test    seed : 97003
+test_name : C_ISA_addi16sp_test    seed : 8430
+test_name : C_ISA_and_test    seed : 42733
+test_name : C_ISA_lw_test    seed : 39061
+test_name : C_ISA_andi_test    seed : 47997
+test_name : C_ISA_lui_test    seed : 58967
+test_name : C_ISA_addi4sp_test    seed : 97467
+test_name : C_ISA_srli_test    seed : 4486
+test_name : C_ISA_sw_test    seed : 33199
+test_name : C_ISA_add_test    seed : 93242
+test_name : C_ISA_reset_test    seed : 12605
+test_name : C_ISA_or_test    seed : 8862
+test_name : C_ISA_nop_test    seed : 90945
+test_name : C_ISA_addi_test    seed : 26151
+test_name : C_ISA_lwsp_test    seed : 14065
+test_name : C_ISA_sub_test    seed : 82522
+test_name : C_ISA_swsp_test    seed : 80989
+test_name : C_ISA_all_test    seed : 80918
+test_name : C_ISA_slli_test    seed : 91972
+test_name : C_ISA_ebreak_test    seed : 74884
+test_name : C_ISA_li_test    seed : 47399
+test_name : C_ISA_srai_test    seed : 38579
+test_name : C_ISA_srai_test    seed : 30068
+test_name : C_ISA_srai_test    seed : 67038
+test_name : C_ISA_srai_test    seed : 99519
+test_name : C_ISA_srai_test    seed : 54461
+test_name : C_ISA_illegal_instruction_test    seed : 40621
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_addi4sp_test    seed : 21308
+test_name : C_ISA_addi_test    seed : 79639
+test_name : C_ISA_lwsp_test    seed : 65663
+test_name : C_ISA_li_test    seed : 91596
+test_name : C_ISA_reset_test    seed : 87991
+test_name : C_ISA_srli_test    seed : 42391
+test_name : C_ISA_slli_test    seed : 86597
+test_name : C_ISA_lw_test    seed : 39398
+test_name : C_ISA_lui_test    seed : 47434
+test_name : C_ISA_andi_test    seed : 6580
+test_name : C_ISA_nop_test    seed : 84086
+test_name : C_ISA_addi16sp_test    seed : 52271
+test_name : C_ISA_swsp_test    seed : 92291
+test_name : C_ISA_illegal_instruction_test    seed : 17357
+test_name : C_ISA_mv_test    seed : 93623
+test_name : C_ISA_ebreak_test    seed : 15196
+test_name : C_ISA_or_test    seed : 43342
+test_name : C_ISA_all_test    seed : 39545
+test_name : C_ISA_sw_test    seed : 77519
+test_name : C_ISA_sub_test    seed : 29390
+test_name : C_ISA_and_test    seed : 13836
+test_name : C_ISA_xor_test    seed : 76618
+test_name : C_ISA_srai_test    seed : 24507
+test_name : C_ISA_srai_test    seed : 92522
+test_name : C_ISA_srai_test    seed : 97394
+test_name : C_ISA_srai_test    seed : 48754
+test_name : C_ISA_srai_test    seed : 87046
+test_name : C_ISA_add_test    seed : 91062
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_reset_test    seed : 83676
+test_name : C_ISA_all_test    seed : 30050
+test_name : C_ISA_srai_test    seed : 58350
+test_name : C_ISA_srai_test    seed : 63172
+test_name : C_ISA_srai_test    seed : 95328
+test_name : C_ISA_srai_test    seed : 81402
+test_name : C_ISA_srai_test    seed : 49906
+test_name : C_ISA_and_test    seed : 55747
+test_name : C_ISA_slli_test    seed : 85504
+test_name : C_ISA_addi16sp_test    seed : 88970
+test_name : C_ISA_or_test    seed : 73301
+test_name : C_ISA_lwsp_test    seed : 97026
+test_name : C_ISA_li_test    seed : 96828
+test_name : C_ISA_srli_test    seed : 27722
+test_name : C_ISA_add_test    seed : 40835
+test_name : C_ISA_lui_test    seed : 38895
+test_name : C_ISA_lw_test    seed : 31644
+test_name : C_ISA_ebreak_test    seed : 60807
+test_name : C_ISA_illegal_instruction_test    seed : 83758
+test_name : C_ISA_mv_test    seed : 17590
+test_name : C_ISA_nop_test    seed : 34326
+test_name : C_ISA_sub_test    seed : 17122
+test_name : C_ISA_addi4sp_test    seed : 38604
+test_name : C_ISA_addi_test    seed : 86256
+test_name : C_ISA_swsp_test    seed : 84651
+test_name : C_ISA_xor_test    seed : 65463
+test_name : C_ISA_andi_test    seed : 58708
+test_name : C_ISA_sw_test    seed : 97147
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_lui_test    seed : 61763
+test_name : C_ISA_li_test    seed : 64596
+test_name : C_ISA_addi4sp_test    seed : 34863
+test_name : C_ISA_lw_test    seed : 30303
+test_name : C_ISA_slli_test    seed : 10572
+test_name : C_ISA_add_test    seed : 88412
+test_name : C_ISA_all_test    seed : 40406
+test_name : C_ISA_illegal_instruction_test    seed : 86998
+test_name : C_ISA_andi_test    seed : 57838
+test_name : C_ISA_and_test    seed : 64461
+test_name : C_ISA_nop_test    seed : 76895
+test_name : C_ISA_addi_test    seed : 54078
+test_name : C_ISA_ebreak_test    seed : 19351
+test_name : C_ISA_lwsp_test    seed : 21848
+test_name : C_ISA_mv_test    seed : 40177
+test_name : C_ISA_srli_test    seed : 56095
+test_name : C_ISA_or_test    seed : 53313
+test_name : C_ISA_srai_test    seed : 83634
+test_name : C_ISA_srai_test    seed : 23179
+test_name : C_ISA_srai_test    seed : 97597
+test_name : C_ISA_srai_test    seed : 71213
+test_name : C_ISA_srai_test    seed : 32933
+test_name : C_ISA_sw_test    seed : 26507
+test_name : C_ISA_addi16sp_test    seed : 15855
+test_name : C_ISA_sub_test    seed : 4298
+test_name : C_ISA_swsp_test    seed : 29489
+test_name : C_ISA_xor_test    seed : 70011
+test_name : C_ISA_reset_test    seed : 43379
+REGRESSION RESULTS
+==================
+
+PASSED TESTS: 0
+
+----------------
+FAILED TESTS: 28
+test_name : C_ISA_all_test    seed : 75880
+test_name : C_ISA_swsp_test    seed : 90498
+test_name : C_ISA_lw_test    seed : 82843
+test_name : C_ISA_li_test    seed : 16354
+test_name : C_ISA_ebreak_test    seed : 77442
+test_name : C_ISA_add_test    seed : 35675
+test_name : C_ISA_slli_test    seed : 16464
+test_name : C_ISA_xor_test    seed : 85177
+test_name : C_ISA_nop_test    seed : 65688
+test_name : C_ISA_and_test    seed : 8398
+test_name : C_ISA_lwsp_test    seed : 95944
+test_name : C_ISA_sub_test    seed : 8620
+test_name : C_ISA_srli_test    seed : 94549
+test_name : C_ISA_addi4sp_test    seed : 87624
+test_name : C_ISA_lui_test    seed : 61781
+test_name : C_ISA_or_test    seed : 69075
+test_name : C_ISA_andi_test    seed : 24598
+test_name : C_ISA_sw_test    seed : 40176
+test_name : C_ISA_illegal_instruction_test    seed : 21364
+test_name : C_ISA_srai_test    seed : 99660
+test_name : C_ISA_srai_test    seed : 6504
+test_name : C_ISA_srai_test    seed : 85891
+test_name : C_ISA_srai_test    seed : 93284
+test_name : C_ISA_srai_test    seed : 99469
+test_name : C_ISA_mv_test    seed : 168
+test_name : C_ISA_reset_test    seed : 41755
+test_name : C_ISA_addi16sp_test    seed : 60819
+test_name : C_ISA_addi_test    seed : 52752

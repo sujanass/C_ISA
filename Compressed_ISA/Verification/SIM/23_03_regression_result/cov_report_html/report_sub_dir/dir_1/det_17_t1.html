@@ -1,0 +1,193 @@
+<HTML>
+<HEAD>
+<link type="text/css" rel="stylesheet" href="../../imc.css"></link>
+<script type="text/javascript" src="../../sortable.js"></script>
+<TITLE>IMC Report: ./cov_report_html</TITLE></HEAD>
+<BODY>
+<A NAME="_topcov"></A>
+<P class="summary_title">Coverage   Summary Report, Instance-Based</P>
+
+<P class="fs"><A STYLE="float: left" class="namet" HREF="../../index.html">Top Level Summary</A><A STYLE="float: right" class="namet" HREF="../../legend.html">Legend and Help</A></P>
+<BR>
+<TABLE class="detail_header"><TR class="detail"><TD>
+
+<B>Instance name: </B><A HREF="../dir_1/summ_0_t1.html" class="namet">riscv_top</A>.load_hazard_ctrl_inst<BR>
+
+<B>Type name: </B>load_hazard_ctrl<BR>
+
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv</A><BR>
+
+</TD></TR></TABLE>
+
+<BR>
+<P class="subtitle">Coverage Summary Report, Instance-Based</P>
+<TABLE class="sortable sml summary_table" id="totalTable">
+
+
+<TR><TH class="wht">Overall</TH>
+<TH class="wht">Overall Covered</TH>
+<TH class="wht">Block</TH>
+<TH class="wht">Expression</TH>
+<TH class="wht">Toggle</TH>
+<TH class="wht">FSM&nbsp;State</TH>
+<TH class="wht">FSM&nbsp;Transition</TH>
+<TH class="wht">Assertion</TH>
+<TH class="wht">CoverGroup</TH>
+<TH class="wht">CoverGroup Covered</TH>
+<TH class="wht">name</TH>
+
+</TR>
+
+<TR><TD class="range95to99"><A HREF="">97.22%</A></TD>
+<TD class="range95to99"><A HREF="">96.00%&nbsp;(48/50)</A></TD>
+<TD class="range100"><A HREF="#_Blockcov">100.00%&nbsp;(6/6)</A></TD>
+<TD class="range90to94"><A HREF="#_Expressioncov">91.67%&nbsp;(22/24)</A></TD>
+<TD class="range100"><A HREF="#_Togglecov">100.00%&nbsp;(20/20)</A></TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="rangenone">n/a</TD>
+<TD class="namecell">load_hazard_ctrl_inst</TD>
+
+</TR>
+
+
+</TABLE>
+<BR><BR><A NAME="_Blockcov"></A>
+<P class="detail_title">     Uncovered Block Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.load_hazard_ctrl_inst<BR>
+<B>Type name: </B>load_hazard_ctrl<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv</A><BR><B>Number of uncovered blocks: </B>0 of 6<BR>
+<B>Number of unreachable blocks: </B>0<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+Count  Block Line  Kind                 Origin Source Code                    
+------------------------------------------------------------------------------
+
+0 items found
+
+</PRE>
+<A NAME="_Expressioncov"></A>
+<P class="detail_title">     Uncovered Expression Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.load_hazard_ctrl_inst<BR>
+<B>Type name: </B>load_hazard_ctrl<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv</A><BR><B>Number of uncovered expressions: </B>2 of 24<BR>
+<B>Number of unreachable expressions: </B>0<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+index  | grade         | line   | expression                                         
+-------------------------------------------------------------------------------------
+1.1    | 80.00% (4/5)  | 40     | (((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2))) ? 1'b1 : 1'b0 
+3.1    | 80.00% (4/5)  | 51     | ((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2)) 
+
+<B>index: </B><B>1.1</B><B> grade: </B><B>80.00% (4/5)</B><B> line: </B><B>40</B><B> source: </B><B>assign stall_en = (((id_ex_rd!={GPR_ADDR_WIDTH{1'b0}}) && (id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2)))) ? 1'b1 : 1'b0;</B>
+
+(((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2))) ? 1'b1 : 1'b0<BR>
+  <B><</B>----------------<B>1</B>-----------------<B>></B>    <B><</B>------<B>2</B>------<B>></B>      <B><</B>----------<B>3</B>----------<B>></B>    <B><</B>----------<B>4</B>----------<B>></B>
+
+index     | hit   | rval | &lt;1&gt; &lt;2&gt; &lt;3&gt; &lt;4&gt; 
+-------------------------------------------
+1.1.1     | 0     | 1    | 1   1   -   1   
+
+<B>index: </B><B>3.1</B><B> grade: </B><B>80.00% (4/5)</B><B> line: </B><B>51</B><B> source: </B><B>if((id_ex_rd!={GPR_ADDR_WIDTH{1'b0}}) && (id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2)))</B>
+
+((id_ex_rd != {GPR_ADDR_WIDTH{1'b0}}) && id_ex_mem_rd_en) && ((id_ex_rd == if_id_rs1) || (id_ex_rd == if_id_rs2))<BR>
+ <B><</B>----------------<B>1</B>-----------------<B>></B>    <B><</B>------<B>2</B>------<B>></B>      <B><</B>----------<B>3</B>----------<B>></B>    <B><</B>----------<B>4</B>----------<B>></B>
+
+index     | hit   | rval | &lt;1&gt; &lt;2&gt; &lt;3&gt; &lt;4&gt; 
+-------------------------------------------
+3.1.1     | 0     | 1    | 1   1   -   1   
+
+
+</PRE>
+<A NAME="_Togglecov"></A>
+<P class="detail_title">     Uncovered Toggle Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.load_hazard_ctrl_inst<BR>
+<B>Type name: </B>load_hazard_ctrl<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv</A><BR><B>Number of uncovered signal bits: </B>0 of 20<BR>
+<B>Number of unreachable signal bits: </B>0<BR>
+<B>Number of signal bits partially toggled(rise): </B>0 of 20<BR>
+<B>Number of signal bits partially toggled(fall): </B>0 of 20<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+Hit(Full)  Hit(Rise)  Hit(Fall)  Signal                    
+-----------------------------------------------------------
+
+0 items found
+
+</PRE>
+<A NAME="_Fsmcov"></A>
+<P class="detail_title">     Uncovered Fsm Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.load_hazard_ctrl_inst<BR>
+<B>Type name: </B>load_hazard_ctrl<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv</A><BR>
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+
+0 items found
+
+</PRE>
+<A NAME="_Assertioncov"></A>
+<P class="detail_title">     Uncovered Assertion Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.load_hazard_ctrl_inst<BR>
+<B>Type name: </B>load_hazard_ctrl<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv</A><BR><B>Number of uncovered assertions: </B>0 of 0<BR>
+
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+Finished Failed Assertion                      Line  Source Code                    
+------------------------------------------------------------------------------------
+
+0 items found
+
+</PRE>
+<A NAME="_CoverGroupcov"></A>
+<P class="detail_title">     Covered+Uncovered+Excluded+UNR CoverGroup Detail Report, Instance Based</P>
+<P class="fs"><A STYLE="float: right" class="namet" HREF="#_topcov">To Top</A></P><BR>
+
+<TABLE class="detail_header"><TR class="detail"><TD>
+<B>Instance name: </B>riscv_top.load_hazard_ctrl_inst<BR>
+<B>Type name: </B>load_hazard_ctrl<BR>
+<B>File name: </B><A HREF="/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv" TARGET="_blank">/home/vvtrainee42/Desktop/SUJANA/Compressed_ISA/RTL_6/ld_hazard_detect.sv</A><BR><B>Number of covered cover bins: </B>0 of 0<BR>
+<B>Number of uncovered cover bins: </B>0 of 0<BR>
+<B>Number of excluded cover bins: </B>0<BR>
+
+
+</TD></TR></TABLE>
+
+</TD></TR></TABLE>
+
+<PRE class="detail_report_text">
+
+0 items found
+
+</PRE>
